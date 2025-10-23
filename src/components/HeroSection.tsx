@@ -154,9 +154,9 @@ const HeroSection = ({
               <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
                 <Shield className="w-8 h-8 text-[#00B8D9]" />
               </div>
-              <h3 className="text-lg font-semibold">Memory Forensics</h3>
+              <h3 className="text-lg font-semibold">APT Detection</h3>
               <p className="text-sm text-gray-300 text-center">
-                Advanced memory analysis techniques for cybersecurity
+                Advanced Persistent Threat detection and mitigation
               </p>
             </motion.div>
 
@@ -167,9 +167,9 @@ const HeroSection = ({
               <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
                 <Brain className="w-8 h-8 text-[#00B8D9]" />
               </div>
-              <h3 className="text-lg font-semibold">LSTM Networks</h3>
+              <h3 className="text-lg font-semibold">Machine Learning</h3>
               <p className="text-sm text-gray-300 text-center">
-                Deep learning models for temporal pattern recognition
+                Multi-stage intelligent threat detection algorithms
               </p>
             </motion.div>
 
@@ -180,9 +180,9 @@ const HeroSection = ({
               <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
                 <Clock className="w-8 h-8 text-[#00B8D9]" />
               </div>
-              <h3 className="text-lg font-semibold">Temporal Analysis</h3>
+              <h3 className="text-lg font-semibold">Real-Time Response</h3>
               <p className="text-sm text-gray-300 text-center">
-                Time-based execution phase detection algorithms
+                Automated blocking and mitigation systems
               </p>
             </motion.div>
           </motion.div>

@@ -9,18 +9,18 @@ import Link from 'next/link';
 export default function Home() {
   const features = [
     {
-      title: 'Memory Forensics',
-      description: 'Advanced techniques for analyzing memory dumps to detect malicious activities and execution phases.',
+      title: 'Phase 1: Reconnaissance',
+      description: 'Anomaly-Based Clustering (DBSCAN/K-Means) with Incremental Learning to detect subtle reconnaissance activities such as port scans, DNS enumeration, or probing behaviors before intrusion begins.',
       icon: Shield,
     },
     {
-      title: 'LSTM Networks',
-      description: 'Deep learning models that excel at temporal pattern recognition in cybersecurity data.',
+      title: 'Phase 2: Delivery',
+      description: 'Hybrid Deep Learning (Bi-directional LSTM/BERT) with Attention Mechanisms to identify and classify sophisticated phishing attempts and malicious payloads that serve as initial infection vectors.',
       icon: Brain,
     },
     {
-      title: 'Temporal Analysis',
-      description: 'Time-based analysis methods for detecting execution phases in memory forensics.',
+      title: 'Phase 3: Execution',
+      description: 'Memory Forensics (Volatility) combined with Temporal Modeling (LSTM) to detect sequential anomalies and malicious in-memory process executions, focusing on memory-resident malware.',
       icon: Clock,
     },
   ];
@@ -57,8 +57,8 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         title="SilentWatch"
-        subtitle="Memory Forensics Based Execution Phase Detection through Temporal Analysis with LSTM"
-        description="An innovative research project that combines advanced memory forensics techniques with deep learning to detect and analyze execution phases in cybersecurity scenarios. Our approach leverages LSTM networks for temporal pattern recognition in memory dumps."
+        subtitle="Advanced Persistent Threat Detection and Mitigation Framework (R25-037)"
+        description="SilentWatch is a state-of-the-art, modular cybersecurity framework engineered to address the growing challenges posed by Advanced Persistent Threats (APTs) — stealthy, targeted attacks that often evade traditional, signature-based security systems by operating in memory or using novel social engineering tactics."
         showButtons={true}
       />
 
@@ -73,10 +73,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
-              Research Focus Areas
+              Multi-Stage, Intelligent Solution
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our research combines cutting-edge memory forensics with machine learning to advance cybersecurity detection capabilities.
+              SilentWatch operates as an integrated, intelligent ecosystem — a collection of specialized machine learning models coordinated through a Centralized Threat Intelligence Repository, enabling granular, real-time threat detection across multiple attack phases.
             </p>
           </motion.div>
 
@@ -101,6 +101,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SilentWatch Framework Section */}
+      <section className="py-20 bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+              SilentWatch Framework Architecture
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              SilentWatch transforms cybersecurity from passive detection to proactive mitigation, offering a powerful, adaptive defense layer built for modern enterprise environments.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-[#00B8D9]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#002B5B] mb-4">Real-Time Adaptability</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Continuously learns from new attack patterns and adapts to evolving adversarial tactics, maintaining high detection accuracy (target &gt; 90%).
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-[#00B8D9]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#002B5B] mb-4">Unified Dashboard</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Provides centralized visibility for detections, analytics, and live system status through an intuitive interface.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 shadow-lg"
+            >
+              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mb-6">
+                <Clock className="w-8 h-8 text-[#00B8D9]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#002B5B] mb-4">Automated Response</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Integrates with an Automated Blocking and Mitigation System capable of terminating malicious processes, isolating hosts, and generating real-time firewall rules.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center bg-white rounded-xl p-8 shadow-lg"
+          >
+            <h3 className="text-3xl font-bold text-[#002B5B] mb-6">
+              SilentWatch: Detect the Undetected
+            </h3>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              SilentWatch redefines advanced threat defense through its intelligent, self-learning, and fully automated framework — delivering real-time detection and immediate response against even the most sophisticated cyber adversaries.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Quick Links Section */}
       <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4">
@@ -112,10 +197,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
-              Explore Our Research
+              Explore SilentWatch Research
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the various aspects of our SilentWatch research project and stay updated with our progress.
+              Discover the comprehensive SilentWatch framework, research methodology, and stay updated with our advanced threat detection progress.
             </p>
           </motion.div>
 
@@ -158,10 +243,10 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold mb-6">
-              Join Our Research Journey
+              Join the SilentWatch Revolution
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Stay connected with our research progress and be part of the cybersecurity innovation community.
+              Be part of the next generation of cybersecurity defense. SilentWatch is redefining how we detect and mitigate Advanced Persistent Threats in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

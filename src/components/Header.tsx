@@ -46,7 +46,9 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold text-[#002B5B]"
+              className={`text-2xl font-bold transition-colors duration-200 ${
+                scrolled ? 'text-[#002B5B]' : 'text-white'
+              }`}
             >
               SilentWatch
             </motion.div>
@@ -64,7 +66,9 @@ const Header = () => {
                   className={`text-sm font-medium transition-colors duration-200 ${
                     pathname === item.href
                       ? 'text-[#00B8D9]'
-                      : 'text-[#002B5B] hover:text-[#00B8D9]'
+                      : scrolled 
+                        ? 'text-[#002B5B] hover:text-[#00B8D9]'
+                        : 'text-white hover:text-[#00B8D9]'
                   }`}
                 >
                   {item.name}
@@ -85,7 +89,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-[#002B5B]"
+            className={`md:hidden p-2 transition-colors duration-200 ${
+              scrolled ? 'text-[#002B5B]' : 'text-white'
+            }`}
           >
             <AnimatePresence mode="wait">
               {isOpen ? (

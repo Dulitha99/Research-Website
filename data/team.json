@@ -2,30 +2,56 @@
   "team": [
     {
       "id": 1,
-      "name": "Dulitha Wijesinghe",
-      "role": "Lead Researcher",
-      "email": "dulitha.wijesinghe@sliit.lk",
-      "photo": "/images/team/dulitha.jpg",
-      "description": "Lead researcher specializing in memory forensics and machine learning applications in cybersecurity.",
-      "specialization": "Memory Forensics, LSTM Networks, Cybersecurity"
+      "name": "Dr. Harinda Fernando",
+      "role": "Supervisor",
+      "email": "harinda.fernando@sliit.lk",
+      "photo": "/images/supervisor.jpg",
+      "description": "Project supervisor specializing in cybersecurity, machine learning, and applied artificial intelligence at SLIIT.",
+      "specialization": "Cybersecurity, Machine Learning, Applied AI",
+      "institution": "Sri Lanka Institute of Information Technology (SLIIT)"
     },
     {
       "id": 2,
-      "name": "Dr. Samantha Rajapakse",
-      "role": "Research Supervisor",
-      "email": "samantha.rajapakse@sliit.lk",
-      "photo": "/images/team/supervisor.jpg",
-      "description": "Senior lecturer and research supervisor with expertise in cybersecurity and digital forensics.",
-      "specialization": "Cybersecurity, Digital Forensics, Research Methodology"
+      "name": "Mr. Amila Senarathne",
+      "role": "Co-Supervisor",
+      "email": "amila.senarathne@sliit.lk",
+      "photo": "/images/co-supervisor.jpg",
+      "description": "Co-supervisor with expertise in cybersecurity, machine learning, and applied artificial intelligence at SLIIT.",
+      "specialization": "Cybersecurity, Machine Learning, Applied AI",
+      "institution": "Sri Lanka Institute of Information Technology (SLIIT)"
     },
     {
       "id": 3,
-      "name": "Prof. Nimal Rajapakse",
-      "role": "Co-Supervisor",
-      "email": "nimal.rajapakse@sliit.lk",
-      "photo": "/images/team/co-supervisor.jpg",
-      "description": "Professor and co-supervisor with extensive experience in machine learning and data science.",
-      "specialization": "Machine Learning, Data Science, Neural Networks"
+      "name": "H.P.D.D.M. Wickramasinghe",
+      "role": "Research & Development Team",
+      "email": "IT21825682@sliit.lk",
+      "photo": "/images/dulitha.jpg",
+      "description": "Led the development of the Execution Phase Detection module, focusing on real-time temporal analysis of volatile memory artifacts. Achieved 94.50% detection accuracy on CIC-MalMem-2022 dataset.",
+      "specialization": "Execution Phase Detection (Memory Forensics & LSTM)",
+      "studentId": "IT21825682",
+      "achievement": "94.50% detection accuracy on CIC-MalMem-2022 dataset"
+    },
+    {
+      "id": 4,
+      "name": "D.L.K.L. Gangaboda",
+      "role": "Research & Development Team",
+      "email": "IT21812330@sliit.lk",
+      "photo": "/images/lelasara.png",
+      "description": "Specialized in the Delivery Vector Analysis module, developing a hybrid deep learning model using Bi-Directional LSTM for phishing and malicious email detection. Attained 98.98% validation accuracy.",
+      "specialization": "Delivery Vector Analysis (Phishing Detection – Bi-LSTM/BERT)",
+      "studentId": "IT21812330",
+      "achievement": "98.98% validation accuracy in phishing detection"
+    },
+    {
+      "id": 5,
+      "name": "N.H.S. Chandrasekara",
+      "role": "Research & Development Team",
+      "email": "IT21812880@sliit.lk",
+      "photo": "/images/nilushi.jpg",
+      "description": "Focused on Reconnaissance Detection, implementing an adaptive DBSCAN-based anomaly detection system to identify subtle network probing and scanning activities with high-precision early detection.",
+      "specialization": "Reconnaissance Detection (Anomaly-Based Clustering)",
+      "studentId": "IT21812880",
+      "achievement": "High-precision early detection with minimal false-positive rate"
     }
   ]
 }
