@@ -2,35 +2,123 @@
   "milestones": [
     {
       "id": 1,
-      "title": "Project Proposal",
-      "date": "2025-02-12",
-      "marks": 10,
-      "description": "Initial project proposal submission with research objectives and methodology",
-      "status": "completed"
+      "title": "Project Charter / Topic Assessment Form (TAF)",
+      "date": "2024-12-18",
+      "marks": 0,
+      "weightage": "0%",
+      "description": "Formal submission defining the project scope, group members, and official topic approval (IT4010).",
+      "status": "completed",
+      "phase": "Phase 1: Initiation and Foundation",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Project scope definition and topic approval"
     },
     {
       "id": 2,
-      "title": "Progress Presentation 1",
-      "date": "2025-04-10",
-      "marks": 20,
-      "description": "First progress presentation showcasing initial research findings",
-      "status": "upcoming"
+      "title": "Project Proposal Report (Draft)",
+      "date": "2025-01-16",
+      "marks": 0,
+      "weightage": "0%",
+      "description": "Draft submission of the complete academic report detailing the Research Problem, Objectives, Detailed Literature Survey, and the initial development Methodology.",
+      "status": "completed",
+      "phase": "Phase 1: Initiation and Foundation",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Research problem, objectives, literature survey, methodology"
     },
     {
       "id": 3,
-      "title": "Progress Presentation 2",
-      "date": "2025-07-15",
-      "marks": 20,
-      "description": "Second progress presentation with advanced research developments",
-      "status": "upcoming"
+      "title": "Project Proposal Report (Final)",
+      "date": "2025-01-31",
+      "marks": 12,
+      "weightage": "12%",
+      "description": "Final submission of the complete academic report detailing the Research Problem, Objectives, Detailed Literature Survey, and the initial development Methodology.",
+      "status": "completed",
+      "phase": "Phase 1: Initiation and Foundation",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Full scope, research problem, initial literature survey, methodology"
     },
     {
       "id": 4,
-      "title": "Final Viva",
-      "date": "2025-11-15",
-      "marks": 40,
-      "description": "Final viva voce examination and project defense",
-      "status": "upcoming"
+      "title": "Progress Presentation I (PP1)",
+      "date": "2025-04-08",
+      "marks": 15,
+      "weightage": "15%",
+      "description": "Presentation covering the completed literature review, selection of core datasets, and detailed planning for the ML model implementations (e.g., Anomaly-Based Clustering and Phishing Detection methodologies).",
+      "status": "upcoming",
+      "phase": "Phase 2: Progress and Proof of Concept",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Detailed literature review, finalized datasets, and initial model planning (Module 1/4)"
+    },
+    {
+      "id": 5,
+      "title": "Research Paper (Published)",
+      "date": "2025-08-29",
+      "marks": 10,
+      "weightage": "10%",
+      "description": "A condensed, publication-ready paper focusing on the novel aspects of the framework's methodology and technical contributions.",
+      "status": "upcoming",
+      "phase": "Phase 3: Finalization and Submission",
+      "learningOutcomes": "LO1 - LO4",
+      "deliverableFocus": "Concise academic summary of novel methodology and final results"
+    },
+    {
+      "id": 6,
+      "title": "Progress Presentation II (PP2)",
+      "date": "2025-09-15",
+      "marks": 18,
+      "weightage": "18%",
+      "description": "Presentation focusing on model building completion (including achieved accuracy/metrics), backend API integration status, and readiness for final system integration testing.",
+      "status": "upcoming",
+      "phase": "Phase 2: Progress and Proof of Concept",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Proof of Concept, model building progress, implementation status, and integration planning"
+    },
+    {
+      "id": 7,
+      "title": "Final Report (Document)",
+      "date": "2025-10-15",
+      "marks": 19,
+      "weightage": "19%",
+      "description": "The definitive written document covering all work, from requirements analysis and design to final evaluation, mitigation strategies, and conclusions.",
+      "status": "upcoming",
+      "phase": "Phase 3: Finalization and Submission",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Comprehensive documentation of design, development, results, analysis, and conclusions"
+    },
+    {
+      "id": 8,
+      "title": "Final Presentation & VIVA",
+      "date": "2025-10-27",
+      "marks": 20,
+      "weightage": "20%",
+      "description": "The compulsory oral examination and live system demonstration, defending the research findings and proving the functionality of the integrated APT Detection and Mitigation Framework.",
+      "status": "upcoming",
+      "phase": "Phase 3: Finalization and Submission",
+      "learningOutcomes": "LO1 - LO5",
+      "deliverableFocus": "Oral defense of the complete project, system demonstration, and technical Q&A"
+    },
+    {
+      "id": 9,
+      "title": "Project Website",
+      "date": "2025-10-27",
+      "marks": 2,
+      "weightage": "2%",
+      "description": "Communication and presentation of the project to a wider audience through a comprehensive project website.",
+      "status": "upcoming",
+      "phase": "Phase 3: Finalization and Submission",
+      "learningOutcomes": "LO4",
+      "deliverableFocus": "Communication and presentation of the project to a wider audience"
+    },
+    {
+      "id": 10,
+      "title": "Research Logbook/Status Docs",
+      "date": "2025-10-27",
+      "marks": 4,
+      "weightage": "4%",
+      "description": "Continuous tracking of individual and group progress, decision-making, and weekly status updates throughout the project lifecycle.",
+      "status": "ongoing",
+      "phase": "Ongoing",
+      "learningOutcomes": "LO4",
+      "deliverableFocus": "Continuous tracking of individual and group progress, decision-making, and weekly status updates"
     }
   ]
 }

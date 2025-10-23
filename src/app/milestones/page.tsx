@@ -3,30 +3,131 @@
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Timeline from '@/components/Timeline';
-import { Calendar, Award, TrendingUp } from 'lucide-react';
+import { 
+  Calendar, 
+  Award, 
+  TrendingUp, 
+  BookOpen, 
+  Presentation, 
+  FileText, 
+  Globe, 
+  CheckCircle,
+  Clock,
+  Target,
+  Users,
+  BarChart3
+} from 'lucide-react';
+import { useState } from 'react';
 import milestonesData from '../../../data/milestones.json';
 
 export default function Milestones() {
   const { milestones } = milestonesData;
+  const [selectedMilestone, setSelectedMilestone] = useState(null);
 
   const stats = [
     {
-      title: 'Total Milestones',
+      title: 'Total Assessments',
       value: milestones.length,
       icon: Calendar,
       color: 'text-[#00B8D9]'
     },
     {
-      title: 'Total Marks',
-      value: milestones.reduce((sum, milestone) => sum + milestone.marks, 0),
+      title: 'Total Weightage',
+      value: '100%',
       icon: Award,
       color: 'text-green-500'
     },
     {
-      title: 'Completion Rate',
-      value: `${Math.round((milestones.filter(m => m.status === 'completed').length / milestones.length) * 100)}%`,
-      icon: TrendingUp,
+      title: 'Completed',
+      value: milestones.filter(m => m.status === 'completed').length,
+      icon: CheckCircle,
+      color: 'text-green-600'
+    },
+    {
+      title: 'Remaining',
+      value: milestones.filter(m => m.status === 'upcoming' || m.status === 'ongoing').length,
+      icon: Clock,
       color: 'text-orange-500'
+    }
+  ];
+
+  const assessmentBreakdown = [
+    {
+      assessment: 'Project Proposal Report (Final)',
+      dueDate: '31st January',
+      weightage: '12%',
+      learningOutcomes: 'LO1 - LO5',
+      deliverableFocus: 'Full scope, research problem, initial literature survey, methodology.'
+    },
+    {
+      assessment: 'Progress Presentation I (PP1)',
+      dueDate: '7th – 9th April',
+      weightage: '15%',
+      learningOutcomes: 'LO1 - LO5',
+      deliverableFocus: 'Detailed literature review, finalized datasets, and initial model planning (Module 1/4).'
+    },
+    {
+      assessment: 'Progress Presentation II (PP2)',
+      dueDate: '15th – 16th September',
+      weightage: '18%',
+      learningOutcomes: 'LO1 - LO5',
+      deliverableFocus: 'Proof of Concept, model building progress, implementation status, and integration planning.'
+    },
+    {
+      assessment: 'Final Report',
+      dueDate: 'October (Final Document)',
+      weightage: '19%',
+      learningOutcomes: 'LO1 - LO5',
+      deliverableFocus: 'Comprehensive documentation of design, development, results, analysis, and conclusions.'
+    },
+    {
+      assessment: 'Final Presentation & VIVA',
+      dueDate: '27th – 28th October',
+      weightage: '20%',
+      learningOutcomes: 'LO1 - LO5',
+      deliverableFocus: 'Oral defense of the complete project, system demonstration, and technical Q&A.'
+    },
+    {
+      assessment: 'Research Paper (Published)',
+      dueDate: '29th August (Submission)',
+      weightage: '10%',
+      learningOutcomes: 'LO1 - LO4',
+      deliverableFocus: 'Concise academic summary of novel methodology and final results.'
+    },
+    {
+      assessment: 'Project Website',
+      dueDate: '27th – 28th October',
+      weightage: '2%',
+      learningOutcomes: 'LO4',
+      deliverableFocus: 'Communication and presentation of the project to a wider audience.'
+    },
+    {
+      assessment: 'Research Logbook/Status Docs',
+      dueDate: 'Ongoing',
+      weightage: '4%',
+      learningOutcomes: 'LO4',
+      deliverableFocus: 'Continuous tracking of individual and group progress, decision-making, and weekly status updates.'
+    }
+  ];
+
+  const phases = [
+    {
+      title: 'Phase 1: Initiation and Foundation',
+      description: 'Project setup, topic approval, and initial research planning',
+      milestones: milestones.filter(m => m.phase === 'Phase 1: Initiation and Foundation'),
+      color: 'bg-blue-50 border-blue-200'
+    },
+    {
+      title: 'Phase 2: Progress and Proof of Concept',
+      description: 'Literature review completion, model development, and progress presentations',
+      milestones: milestones.filter(m => m.phase === 'Phase 2: Progress and Proof of Concept'),
+      color: 'bg-green-50 border-green-200'
+    },
+    {
+      title: 'Phase 3: Finalization and Submission',
+      description: 'Final documentation, presentations, and project completion',
+      milestones: milestones.filter(m => m.phase === 'Phase 3: Finalization and Submission'),
+      color: 'bg-purple-50 border-purple-200'
     }
   ];
 
@@ -34,14 +135,68 @@ export default function Milestones() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroSection
-        title="Project Milestones"
-        subtitle="Research Progress & Key Achievements"
-        description="Track our research journey through key milestones, presentations, and achievements. Each milestone represents significant progress in our SilentWatch research project."
+        title="Milestones: Project Timeline and Assessments"
+        subtitle="Advanced Persistent Threat (APT) Detection and Mitigation Framework (R25-037)"
+        description="This section details the formal assessment structure for the Advanced Persistent Threat (APT) Detection and Mitigation Framework, including due dates and marks allocated, aligning with the IT4010 Research Project module requirements."
         showButtons={false}
       />
 
+      {/* Assessment Breakdown Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+              Assessment Breakdown
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Comprehensive overview of all assessment items, due dates, weightage, and learning outcomes for the SilentWatch project.
+            </p>
+          </motion.div>
+
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-[#002B5B] text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left font-semibold">Assessment Item</th>
+                    <th className="px-6 py-4 text-left font-semibold">Due Date (Tentative)</th>
+                    <th className="px-6 py-4 text-left font-semibold">Weightage (Marks)</th>
+                    <th className="px-6 py-4 text-left font-semibold">Learning Outcomes (LO) Covered</th>
+                    <th className="px-6 py-4 text-left font-semibold">Deliverable Focus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {assessmentBreakdown.map((item, index) => (
+                    <motion.tr
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                    >
+                      <td className="px-6 py-4 font-semibold text-[#002B5B]">{item.assessment}</td>
+                      <td className="px-6 py-4 text-gray-700">{item.dueDate}</td>
+                      <td className="px-6 py-4 text-gray-700">{item.weightage}</td>
+                      <td className="px-6 py-4 text-gray-700">{item.learningOutcomes}</td>
+                      <td className="px-6 py-4 text-gray-700">{item.deliverableFocus}</td>
+                    </motion.tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#F5F5F5]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -54,11 +209,11 @@ export default function Milestones() {
               Project Statistics
             </h2>
             <p className="text-lg text-gray-600">
-              Overview of our research progress and achievements
+              Overview of our research progress and assessment structure
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.title}
@@ -83,6 +238,74 @@ export default function Milestones() {
         </div>
       </section>
 
+      {/* Detailed Milestone List Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+              Detailed Milestone List
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              This list provides the formal documents and presentations required throughout the project lifecycle. Click on any milestone to view detailed information.
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {phases.map((phase, phaseIndex) => (
+              <motion.div
+                key={phaseIndex}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: phaseIndex * 0.1 }}
+                viewport={{ once: true }}
+                className={`rounded-xl border-2 ${phase.color} p-8`}
+              >
+                <h3 className="text-2xl font-bold text-[#002B5B] mb-4">{phase.title}</h3>
+                <p className="text-gray-600 mb-6">{phase.description}</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {phase.milestones.map((milestone, index) => (
+                    <motion.div
+                      key={milestone.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                      onClick={() => setSelectedMilestone(milestone)}
+                    >
+                      <div className="flex justify-between items-start mb-3">
+                        <h4 className="font-semibold text-[#002B5B] text-sm">{milestone.title}</h4>
+                        <span className="text-xs text-[#00B8D9] font-medium">{milestone.weightage}</span>
+                      </div>
+                      <p className="text-gray-600 text-xs mb-3">{milestone.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-gray-500">
+                          {new Date(milestone.date).toLocaleDateString()}
+                        </span>
+                        <span className={`text-xs px-2 py-1 rounded-full ${
+                          milestone.status === 'completed' ? 'bg-green-100 text-green-800' :
+                          milestone.status === 'upcoming' ? 'bg-blue-100 text-blue-800' :
+                          'bg-orange-100 text-orange-800'
+                        }`}>
+                          {milestone.status}
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Timeline Section */}
       <section className="py-20 bg-[#F5F5F5]">
         <div className="container mx-auto px-4">
@@ -97,7 +320,7 @@ export default function Milestones() {
               Research Timeline
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our research journey through key milestones, presentations, and achievements. Each milestone represents significant progress in advancing memory forensics through machine learning.
+              Visual timeline of our SilentWatch research journey through key milestones, presentations, and achievements.
             </p>
           </motion.div>
 
@@ -107,83 +330,71 @@ export default function Milestones() {
         </div>
       </section>
 
-      {/* Progress Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Milestone Detail Modal */}
+      {selectedMilestone && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedMilestone(null)}
+        >
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white rounded-xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
-              Research Progress Overview
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our research follows a structured approach with clear milestones and deliverables to ensure comprehensive development of our SilentWatch system.
-            </p>
+            <div className="flex justify-between items-start mb-6">
+              <h3 className="text-2xl font-bold text-[#002B5B]">{selectedMilestone.title}</h3>
+              <button
+                onClick={() => setSelectedMilestone(null)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-[#002B5B] mb-2">Description</h4>
+                <p className="text-gray-700">{selectedMilestone.description}</p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-[#002B5B] mb-2">Due Date</h4>
+                  <p className="text-gray-700">{new Date(selectedMilestone.date).toLocaleDateString()}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#002B5B] mb-2">Weightage</h4>
+                  <p className="text-gray-700">{selectedMilestone.weightage}</p>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-[#002B5B] mb-2">Learning Outcomes</h4>
+                <p className="text-gray-700">{selectedMilestone.learningOutcomes}</p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-[#002B5B] mb-2">Deliverable Focus</h4>
+                <p className="text-gray-700">{selectedMilestone.deliverableFocus}</p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-[#002B5B] mb-2">Status</h4>
+                <span className={`px-3 py-1 rounded-full text-sm ${
+                  selectedMilestone.status === 'completed' ? 'bg-green-100 text-green-800' :
+                  selectedMilestone.status === 'upcoming' ? 'bg-blue-100 text-blue-800' :
+                  'bg-orange-100 text-orange-800'
+                }`}>
+                  {selectedMilestone.status}
+                </span>
+              </div>
+            </div>
           </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Completed Milestones */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-green-50 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
-                <Award className="w-6 h-6 mr-3" />
-                Completed Milestones
-              </h3>
-              <div className="space-y-4">
-                {milestones.filter(m => m.status === 'completed').map((milestone) => (
-                  <div key={milestone.id} className="bg-white rounded-lg p-4 shadow-sm">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-[#002B5B]">{milestone.title}</h4>
-                      <span className="text-sm text-green-600 font-medium">{milestone.marks} marks</span>
-                    </div>
-                    <p className="text-gray-600 text-sm">{milestone.description}</p>
-                    <p className="text-xs text-gray-500 mt-2">
-                      Completed: {new Date(milestone.date).toLocaleDateString()}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Upcoming Milestones */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-[#00B8D9]/10 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-bold text-[#002B5B] mb-6 flex items-center">
-                <Calendar className="w-6 h-6 mr-3" />
-                Upcoming Milestones
-              </h3>
-              <div className="space-y-4">
-                {milestones.filter(m => m.status === 'upcoming').map((milestone) => (
-                  <div key={milestone.id} className="bg-white rounded-lg p-4 shadow-sm">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-[#002B5B]">{milestone.title}</h4>
-                      <span className="text-sm text-[#00B8D9] font-medium">{milestone.marks} marks</span>
-                    </div>
-                    <p className="text-gray-600 text-sm">{milestone.description}</p>
-                    <p className="text-xs text-gray-500 mt-2">
-                      Scheduled: {new Date(milestone.date).toLocaleDateString()}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        </motion.div>
+      )}
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-br from-[#002B5B] to-[#001A3D] text-white">
@@ -196,10 +407,10 @@ export default function Milestones() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl font-bold mb-6">
-              Stay Updated with Our Progress
+              Follow Our Research Journey
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Follow our research journey and be the first to know about our latest findings and achievements.
+              Stay updated with our SilentWatch project progress and be the first to know about our latest findings and achievements in APT detection and mitigation.
             </p>
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
