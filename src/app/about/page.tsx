@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Card from '@/components/Card';
 import { Mail, Linkedin, Github, Award, BookOpen, Users, Shield } from 'lucide-react';
-import teamData from '@/data/team.json';
+import teamData from '../../../data/team.json';
 
 export default function About() {
   const { team } = teamData;

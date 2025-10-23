@@ -28,25 +28,47 @@ const HeroSection = ({
         
         {/* Animated Particles */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-[#00B8D9]/30 rounded-full"
-              initial={{
-                x: Math.random() * window?.innerWidth || 1200,
-                y: Math.random() * window?.innerHeight || 800,
-              }}
-              animate={{
-                x: Math.random() * (window?.innerWidth || 1200),
-                y: Math.random() * (window?.innerHeight || 800),
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                repeatType: 'reverse',
-              }}
-            />
-          ))}
+          {[...Array(20)].map((_, i) => {
+            // Pre-calculated positions to ensure exact server/client consistency
+            const positions = [
+              { initial: { x: 100, y: 200 }, animate: { x: 800, y: 400 }, duration: 15 },
+              { initial: { x: 300, y: 150 }, animate: { x: 900, y: 600 }, duration: 18 },
+              { initial: { x: 500, y: 300 }, animate: { x: 200, y: 700 }, duration: 12 },
+              { initial: { x: 700, y: 100 }, animate: { x: 1100, y: 500 }, duration: 20 },
+              { initial: { x: 200, y: 400 }, animate: { x: 600, y: 200 }, duration: 16 },
+              { initial: { x: 900, y: 250 }, animate: { x: 400, y: 800 }, duration: 14 },
+              { initial: { x: 150, y: 500 }, animate: { x: 750, y: 150 }, duration: 17 },
+              { initial: { x: 650, y: 350 }, animate: { x: 950, y: 650 }, duration: 19 },
+              { initial: { x: 400, y: 100 }, animate: { x: 1000, y: 300 }, duration: 13 },
+              { initial: { x: 800, y: 450 }, animate: { x: 300, y: 750 }, duration: 21 },
+              { initial: { x: 250, y: 300 }, animate: { x: 850, y: 550 }, duration: 15 },
+              { initial: { x: 550, y: 200 }, animate: { x: 150, y: 600 }, duration: 18 },
+              { initial: { x: 750, y: 400 }, animate: { x: 1050, y: 100 }, duration: 16 },
+              { initial: { x: 350, y: 600 }, animate: { x: 700, y: 250 }, duration: 14 },
+              { initial: { x: 950, y: 150 }, animate: { x: 500, y: 700 }, duration: 20 },
+              { initial: { x: 100, y: 350 }, animate: { x: 600, y: 500 }, duration: 17 },
+              { initial: { x: 600, y: 500 }, animate: { x: 1000, y: 200 }, duration: 19 },
+              { initial: { x: 450, y: 250 }, animate: { x: 800, y: 650 }, duration: 13 },
+              { initial: { x: 850, y: 300 }, animate: { x: 200, y: 550 }, duration: 21 },
+              { initial: { x: 300, y: 450 }, animate: { x: 900, y: 100 }, duration: 15 }
+            ];
+            
+            const pos = positions[i] || { initial: { x: 100, y: 200 }, animate: { x: 800, y: 400 }, duration: 15 };
+            
+            return (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-[#00B8D9]/30 rounded-full"
+                initial={pos.initial}
+                animate={pos.animate}
+                transition={{
+                  duration: pos.duration,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                }}
+              />
+            );
+          })}
         </div>
       </div>
 

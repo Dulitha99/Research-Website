@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Card from '@/components/Card';
-import { Download, FileText, FileCheck, BookOpen, CheckSquare, Calendar, FileSize } from 'lucide-react';
-import documentsData from '@/data/documents.json';
+import { Download, FileText, FileCheck, BookOpen, CheckSquare, Calendar, HardDrive } from 'lucide-react';
+import documentsData from '../../../data/documents.json';
 
 export default function Documents() {
   const { documents } = documentsData;
@@ -73,7 +73,7 @@ export default function Documents() {
                     {/* Document Info */}
                     <div className="flex items-center justify-between text-sm text-gray-500">
                       <div className="flex items-center space-x-1">
-                        <FileSize className="w-4 h-4" />
+                        <HardDrive className="w-4 h-4" />
                         <span>{document.size}</span>
                       </div>
                       <div className="flex items-center space-x-1">

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Timeline from '@/components/Timeline';
 import { Calendar, Award, TrendingUp } from 'lucide-react';
-import milestonesData from '@/data/milestones.json';
+import milestonesData from '../../../data/milestones.json';
 
 export default function Milestones() {
   const { milestones } = milestonesData;

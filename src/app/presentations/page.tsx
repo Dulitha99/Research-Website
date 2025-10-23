@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Card from '@/components/Card';
 import { Presentation, Calendar, Clock, CheckCircle, Play, Download } from 'lucide-react';
-import presentationsData from '@/data/presentations.json';
+import presentationsData from '../../../data/presentations.json';
 
 export default function Presentations() {
   const { presentations } = presentationsData;
