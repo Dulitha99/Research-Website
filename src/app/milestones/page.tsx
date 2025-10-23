@@ -19,10 +19,11 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import milestonesData from '../../../data/milestones.json';
+import { Milestone } from '@/types/milestone';
 
 export default function Milestones() {
-  const { milestones } = milestonesData;
-  const [selectedMilestone, setSelectedMilestone] = useState(null);
+  const { milestones } = milestonesData as { milestones: Milestone[] };
+  const [selectedMilestone, setSelectedMilestone] = useState<Milestone | null>(null);
 
   const stats = [
     {

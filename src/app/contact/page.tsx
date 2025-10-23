@@ -68,12 +68,12 @@ export default function Contact() {
       {/* Hero Section */}
       <HeroSection
         title="Contact Us"
-        subtitle="Get in Touch with Our Research Team"
-        description="Have questions about our SilentWatch research project? Want to collaborate or learn more about our findings? We'd love to hear from you. Reach out to our research team for any inquiries or discussions."
+        subtitle="SilentWatch Project (R25-037) - Advanced Persistent Threat Detection and Mitigation Framework"
+        description="We welcome inquiries regarding the SilentWatch project (R25-037), its technical documentation, research methodologies, or potential integration opportunities. Get in touch with our research team for any questions, collaboration opportunities, or technical discussions."
         showButtons={false}
       />
 
-      {/* Contact Form & Info */}
+      {/* General Contacts & Inquiries */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -84,182 +84,224 @@ export default function Contact() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
-              Get in Touch
+              General Contacts & Inquiries
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're always interested in hearing from fellow researchers, students, and professionals in the cybersecurity and machine learning communities.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              For general questions, technical support, or project feedback, please use the following contact information.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8"
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
             >
-              <h3 className="text-2xl font-bold text-[#002B5B] mb-6">Send us a Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B8D9] focus:border-transparent transition-all duration-300"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B8D9] focus:border-transparent transition-all duration-300"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B8D9] focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell us about your inquiry or how we can help..."
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-[#00B8D9] text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-[#0099CC] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </motion.button>
-
-                {/* Status Messages */}
-                {submitStatus === 'success' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg"
-                  >
-                    <CheckCircle className="w-5 h-5" />
-                    <span>Message sent successfully! We'll get back to you soon.</span>
-                  </motion.div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg"
-                  >
-                    <AlertCircle className="w-5 h-5" />
-                    <span>There was an error sending your message. Please try again.</span>
-                  </motion.div>
-                )}
-              </form>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div>
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-6">Contact Information</h3>
-                <p className="text-gray-600 mb-8">
-                  Reach out to us through any of the following channels. We typically respond within 24-48 hours.
-                </p>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-[#002B5B] text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left font-semibold">Category</th>
+                      <th className="px-6 py-4 text-left font-semibold">Detail</th>
+                      <th className="px-6 py-4 text-left font-semibold">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">Project E-mail (General)</td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href="mailto:silentwatch.apt.r25037@sliit.lk" 
+                          className="text-[#00B8D9] hover:text-[#002B5B] font-medium"
+                        >
+                          silentwatch.apt.r25037@sliit.lk
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-gray-600">Please use this address for all formal project inquiries.</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">Academic Supervisor</td>
+                      <td className="px-6 py-4">Dr. Harinda Fernando</td>
+                      <td className="px-6 py-4 text-gray-600">Contact details available upon formal request.</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">Co-supervisor</td>
+                      <td className="px-6 py-4">Mr. Amila Senarathne</td>
+                      <td className="px-6 py-4 text-gray-600">Contact details available upon formal request.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-              {contactInfo.map((info, index) => (
-                <motion.div
-                  key={info.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.02 }}
-                  onClick={info.action}
-                  className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#00B8D9]/10 rounded-lg flex items-center justify-center group-hover:bg-[#00B8D9]/20 transition-colors duration-300">
-                      <info.icon className="w-6 h-6 text-[#00B8D9]" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-[#002B5B] mb-1">
-                        {info.title}
-                      </h4>
-                      <p className="text-[#00B8D9] font-medium mb-1">
-                        {info.value}
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {info.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+      {/* Development Team Member Contacts */}
+      <section className="py-20 bg-[#F5F5F5]">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+              Development Team Member Contacts
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              For specific module questions, you can reach the respective development team members directly via their official emails.
+            </p>
+          </motion.div>
 
-              {/* Additional Info */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-[#F5F5F5] rounded-lg p-6"
-              >
-                <h4 className="text-lg font-semibold text-[#002B5B] mb-3">
-                  Response Time
-                </h4>
-                <p className="text-gray-600 text-sm mb-4">
-                  We typically respond to inquiries within 24-48 hours during business days.
-                </p>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
-                  <p><strong>Time Zone:</strong> Sri Lanka Standard Time (UTC+5:30)</p>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+            >
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-[#00B8D9] text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left font-semibold">Member Name</th>
+                      <th className="px-6 py-4 text-left font-semibold">Student ID</th>
+                      <th className="px-6 py-4 text-left font-semibold">E-mail Address</th>
+                      <th className="px-6 py-4 text-left font-semibold">Module Specialization</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">H.P.D.D.M. Wickramasinghe</td>
+                      <td className="px-6 py-4 text-gray-600">IT21825682</td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href="mailto:IT21825682@sliit.lk" 
+                          className="text-[#00B8D9] hover:text-[#002B5B] font-medium"
+                        >
+                          IT21825682@sliit.lk
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-gray-600">Execution Phase (Memory Forensics)</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">D.L.K.L. Gangaboda</td>
+                      <td className="px-6 py-4 text-gray-600">IT21812330</td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href="mailto:IT21812330@sliit.lk" 
+                          className="text-[#00B8D9] hover:text-[#002B5B] font-medium"
+                        >
+                          IT21812330@sliit.lk
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-gray-600">Delivery Vector (Phishing Detection)</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">N.H.S. Chandrasekara</td>
+                      <td className="px-6 py-4 text-gray-600">IT21812880</td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href="mailto:IT21812880@sliit.lk" 
+                          className="text-[#00B8D9] hover:text-[#002B5B] font-medium"
+                        >
+                          IT21812880@sliit.lk
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-gray-600">Reconnaissance (Clustering)</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="px-6 py-4 font-medium text-[#002B5B]">I.D. Sellahewa</td>
+                      <td className="px-6 py-4 text-gray-600">IT21825996</td>
+                      <td className="px-6 py-4">
+                        <a 
+                          href="mailto:IT21825996@sliit.lk" 
+                          className="text-[#00B8D9] hover:text-[#002B5B] font-medium"
+                        >
+                          IT21825996@sliit.lk
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-gray-600">Exploitation (Reinforcement Learning)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6"
+            >
+              <p className="text-gray-700 text-center">
+                <strong>Note:</strong> Direct contact emails for individual team members are available on the About Us page and listed above for convenience.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* General E-mail Template */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+              General E-mail Template
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              If you would like to reach the development team directly, please use the following structure in your message to ensure a prompt and relevant response.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 rounded-xl p-8 shadow-lg"
+            >
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-[#002B5B] mb-2">Subject Line:</h3>
+                  <p className="text-gray-700 font-mono bg-white p-3 rounded border">
+                    SilentWatch Inquiry - [Brief Topic: e.g., Integration/Bug Report/Academic Question]
+                  </p>
                 </div>
-              </motion.div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-[#002B5B] mb-2">Email Template:</h3>
+                  <div className="bg-white p-6 rounded border font-mono text-sm text-gray-700 whitespace-pre-line">
+{`Dear SilentWatch Development Team,
+
+My name is [Your Name], and I am reaching out regarding [Your Organization/Affiliation].
+
+I am interested in [Briefly state your purpose, e.g., learning more about the LSTM module, discussing potential collaboration, or reporting an issue].
+
+Specifically, I would appreciate information on:
+[List specific questions or areas of interest here, if applicable.]
+
+Thank you for your time and consideration. I look forward to your response.
+
+Sincerely,
+[Your Name]
+[Your Contact Phone Number (Optional)]`}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -287,19 +329,23 @@ export default function Contact() {
             {[
               {
                 question: "What is the SilentWatch research project about?",
-                answer: "SilentWatch is a research project that combines memory forensics with LSTM networks to detect execution phases in cybersecurity scenarios. Our goal is to improve the accuracy and automation of memory analysis techniques."
+                answer: "SilentWatch (R25-037) is an Advanced Persistent Threat Detection and Mitigation Framework that combines memory forensics with LSTM networks to detect execution phases in cybersecurity scenarios. Our goal is to improve the accuracy and automation of memory analysis techniques across multiple attack phases."
               },
               {
-                question: "How can I collaborate with your research team?",
-                answer: "We welcome collaboration from researchers, students, and professionals in cybersecurity and machine learning. Please contact us through the form above or email us directly at silentwatch@sliit.lk."
+                question: "How can I contact the research team?",
+                answer: "You can reach us through our general project email (silentwatch.apt.r25037@sliit.lk) or contact individual team members directly for specific module questions. Use the email template provided above for best results."
+              },
+              {
+                question: "Who should I contact for specific technical questions?",
+                answer: "For module-specific questions, contact the respective team member: H.P.D.D.M. Wickramasinghe (Execution Phase), D.L.K.L. Gangaboda (Delivery Vector), N.H.S. Chandrasekara (Reconnaissance), or I.D. Sellahewa (Exploitation)."
               },
               {
                 question: "Are your research findings publicly available?",
                 answer: "Yes, we publish our findings in academic papers and presentations. You can access our documents and presentations through the respective sections of this website."
               },
               {
-                question: "Can I use your research for my own projects?",
-                answer: "We encourage the use of our research findings for academic and research purposes. Please cite our work appropriately and contact us if you have specific questions about implementation."
+                question: "Can I collaborate with your research team?",
+                answer: "We welcome collaboration from researchers, students, and professionals in cybersecurity and machine learning. Please use the general project email or contact individual team members based on your area of interest."
               }
             ].map((faq, index) => (
               <motion.div

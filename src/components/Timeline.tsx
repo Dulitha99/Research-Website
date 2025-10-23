@@ -4,15 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Calendar, CheckCircle, Clock, Award } from 'lucide-react';
-
-interface Milestone {
-  id: number;
-  title: string;
-  date: string;
-  marks: number;
-  description: string;
-  status: 'completed' | 'upcoming' | 'ongoing';
-}
+import { Milestone } from '@/types/milestone';
 
 interface TimelineProps {
   milestones: Milestone[];

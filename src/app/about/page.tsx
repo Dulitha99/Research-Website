@@ -28,9 +28,25 @@ export default function About() {
     window.location.href = `mailto:${email}`;
   };
 
-  const handleLinkedInClick = (name: string) => {
-    console.log(`Opening LinkedIn profile for ${name}...`);
-    alert(`Opening LinkedIn profile for ${name}...`);
+  const handleLinkedInClick = (linkedinUrl: string) => {
+    if (linkedinUrl) {
+      // Ensure the URL is properly formatted
+      const url = linkedinUrl.startsWith('http') ? linkedinUrl : `https://${linkedinUrl}`;
+      console.log('Opening LinkedIn profile:', url);
+      try {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!newWindow) {
+          console.warn('Popup blocked, trying direct navigation');
+          window.location.href = url;
+        }
+      } catch (error) {
+        console.error('Error opening LinkedIn profile:', error);
+        // Fallback: try to navigate directly
+        window.location.href = url;
+      }
+    } else {
+      console.warn('No LinkedIn URL provided');
+    }
   };
 
   const handleGithubClick = (name: string) => {
@@ -84,9 +100,22 @@ export default function About() {
                   className="h-full group"
                 >
                   <div className="space-y-4">
-                    {/* Supervisor Photo Placeholder */}
-                    <div className="w-24 h-24 bg-gradient-to-br from-[#00B8D9] to-[#002B5B] rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold">
-                      {supervisor.name.split(' ').map(n => n[0]).join('')}
+                    {/* Supervisor Photo */}
+                    <div className="w-24 h-24 rounded-full mx-auto overflow-hidden border-4 border-[#00B8D9]">
+                      <img 
+                        src={supervisor.photo} 
+                        alt={supervisor.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to initials if image fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#00B8D9] to-[#002B5B] rounded-full flex items-center justify-center text-white text-2xl font-bold">${supervisor.name.split(' ').map(n => n[0]).join('')}</div>`;
+                          }
+                        }}
+                      />
                     </div>
 
                     {/* Role */}
@@ -113,6 +142,20 @@ export default function About() {
                         <Mail className="w-4 h-4" />
                         <span className="text-sm font-medium">Email</span>
                       </motion.button>
+                      
+                      {supervisor.linkedin && (
+                        <div className="flex justify-center">
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => handleLinkedInClick(supervisor.linkedin)}
+                            className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300 rounded-lg hover:bg-[#00B8D9]/10"
+                            title={`Visit ${supervisor.name}'s LinkedIn profile`}
+                          >
+                            <Linkedin className="w-5 h-5" />
+                          </motion.button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -203,14 +246,17 @@ export default function About() {
                       </motion.button>
 
                       <div className="flex space-x-4 justify-center">
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => handleLinkedInClick(member.name)}
-                          className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                        </motion.button>
+                        {member.linkedin && (
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => handleLinkedInClick(member.linkedin)}
+                            className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300 rounded-lg hover:bg-[#00B8D9]/10"
+                            title={`Visit ${member.name}'s LinkedIn profile`}
+                          >
+                            <Linkedin className="w-5 h-5" />
+                          </motion.button>
+                        )}
                         <motion.button
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
