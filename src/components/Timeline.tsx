@@ -11,7 +11,7 @@ interface Milestone {
   date: string;
   marks: number;
   description: string;
-  status: 'completed' | 'upcoming';
+  status: 'completed' | 'upcoming' | 'ongoing';
 }
 
 interface TimelineProps {
@@ -28,6 +28,8 @@ const Timeline = ({ milestones }: TimelineProps) => {
         return <CheckCircle className="w-6 h-6 text-green-500" />;
       case 'upcoming':
         return <Clock className="w-6 h-6 text-[#00B8D9]" />;
+      case 'ongoing':
+        return <Clock className="w-6 h-6 text-orange-500" />;
       default:
         return <Calendar className="w-6 h-6 text-gray-400" />;
     }
@@ -39,6 +41,8 @@ const Timeline = ({ milestones }: TimelineProps) => {
         return 'border-green-500 bg-green-50';
       case 'upcoming':
         return 'border-[#00B8D9] bg-[#00B8D9]/5';
+      case 'ongoing':
+        return 'border-orange-500 bg-orange-50';
       default:
         return 'border-gray-300 bg-gray-50';
     }
@@ -102,10 +106,13 @@ const Timeline = ({ milestones }: TimelineProps) => {
                   className={`mt-4 md:mt-0 px-4 py-2 rounded-full text-sm font-semibold ${
                     milestone.status === 'completed'
                       ? 'bg-green-100 text-green-800'
+                      : milestone.status === 'ongoing'
+                      ? 'bg-orange-100 text-orange-800'
                       : 'bg-[#00B8D9]/10 text-[#00B8D9]'
                   }`}
                 >
-                  {milestone.status === 'completed' ? 'Completed' : 'Upcoming'}
+                  {milestone.status === 'completed' ? 'Completed' : 
+                   milestone.status === 'ongoing' ? 'Ongoing' : 'Upcoming'}
                 </motion.div>
               </div>
 
