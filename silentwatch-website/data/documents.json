@@ -1,0 +1,40 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "title": "Project Proposal",
+      "type": "PDF",
+      "size": "2.3 MB",
+      "description": "Initial project proposal document",
+      "downloadUrl": "/documents/proposal.pdf",
+      "icon": "FileText"
+    },
+    {
+      "id": 2,
+      "title": "Project Charter",
+      "type": "PDF",
+      "size": "1.8 MB",
+      "description": "Project charter and scope definition",
+      "downloadUrl": "/documents/charter.pdf",
+      "icon": "FileCheck"
+    },
+    {
+      "id": 3,
+      "title": "Final Report",
+      "type": "PDF",
+      "size": "5.2 MB",
+      "description": "Complete project final report",
+      "downloadUrl": "/documents/final-report.pdf",
+      "icon": "BookOpen"
+    },
+    {
+      "id": 4,
+      "title": "Research Checklist",
+      "type": "PDF",
+      "size": "0.8 MB",
+      "description": "Research methodology checklist",
+      "downloadUrl": "/documents/checklist.pdf",
+      "icon": "CheckSquare"
+    }
+  ]
+}

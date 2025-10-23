@@ -1,0 +1,36 @@
+{
+  "milestones": [
+    {
+      "id": 1,
+      "title": "Project Proposal",
+      "date": "2025-02-12",
+      "marks": 10,
+      "description": "Initial project proposal submission with research objectives and methodology",
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "title": "Progress Presentation 1",
+      "date": "2025-04-10",
+      "marks": 20,
+      "description": "First progress presentation showcasing initial research findings",
+      "status": "upcoming"
+    },
+    {
+      "id": 3,
+      "title": "Progress Presentation 2",
+      "date": "2025-07-15",
+      "marks": 20,
+      "description": "Second progress presentation with advanced research developments",
+      "status": "upcoming"
+    },
+    {
+      "id": 4,
+      "title": "Final Viva",
+      "date": "2025-11-15",
+      "marks": 40,
+      "description": "Final viva voce examination and project defense",
+      "status": "upcoming"
+    }
+  ]
+}

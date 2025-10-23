@@ -1,0 +1,31 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Dulitha Wijesinghe",
+      "role": "Lead Researcher",
+      "email": "dulitha.wijesinghe@sliit.lk",
+      "photo": "/images/team/dulitha.jpg",
+      "description": "Lead researcher specializing in memory forensics and machine learning applications in cybersecurity.",
+      "specialization": "Memory Forensics, LSTM Networks, Cybersecurity"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Samantha Rajapakse",
+      "role": "Research Supervisor",
+      "email": "samantha.rajapakse@sliit.lk",
+      "photo": "/images/team/supervisor.jpg",
+      "description": "Senior lecturer and research supervisor with expertise in cybersecurity and digital forensics.",
+      "specialization": "Cybersecurity, Digital Forensics, Research Methodology"
+    },
+    {
+      "id": 3,
+      "name": "Prof. Nimal Rajapakse",
+      "role": "Co-Supervisor",
+      "email": "nimal.rajapakse@sliit.lk",
+      "photo": "/images/team/co-supervisor.jpg",
+      "description": "Professor and co-supervisor with extensive experience in machine learning and data science.",
+      "specialization": "Machine Learning, Data Science, Neural Networks"
+    }
+  ]
+}

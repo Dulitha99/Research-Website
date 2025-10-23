@@ -1,0 +1,40 @@
+{
+  "presentations": [
+    {
+      "id": 1,
+      "title": "Project Proposal Presentation",
+      "date": "2025-02-12",
+      "type": "PowerPoint",
+      "description": "Initial project proposal presentation outlining research objectives and methodology",
+      "slidesUrl": "/presentations/proposal-slides.pptx",
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "title": "Progress Presentation 1",
+      "date": "2025-04-10",
+      "type": "PowerPoint",
+      "description": "First progress presentation showcasing initial findings and developments",
+      "slidesUrl": "/presentations/progress-1.pptx",
+      "status": "upcoming"
+    },
+    {
+      "id": 3,
+      "title": "Progress Presentation 2",
+      "date": "2025-07-15",
+      "type": "PowerPoint",
+      "description": "Second progress presentation with advanced research developments",
+      "slidesUrl": "/presentations/progress-2.pptx",
+      "status": "upcoming"
+    },
+    {
+      "id": 4,
+      "title": "Final Presentation",
+      "date": "2025-11-15",
+      "type": "PowerPoint",
+      "description": "Final project presentation and defense",
+      "slidesUrl": "/presentations/final.pptx",
+      "status": "upcoming"
+    }
+  ]
+}
