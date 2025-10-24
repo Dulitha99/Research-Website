@@ -32,15 +32,19 @@ export default function Presentations() {
   };
 
   const handleViewPresentation = (slidesUrl: string, title: string) => {
-    // In a real application, this would open the presentation
-    console.log(`Opening ${title} from ${slidesUrl}`);
+    console.log('Viewing presentation:', title, slidesUrl);
     alert(`Opening ${title}...`);
+    // Open the Google Drive presentation in presentation mode
+    const viewUrl = slidesUrl + '/present';
+    window.open(viewUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleDownloadSlides = (slidesUrl: string, title: string) => {
-    // In a real application, this would trigger the download
-    console.log(`Downloading ${title} from ${slidesUrl}`);
+    console.log('Downloading presentation:', title, slidesUrl);
     alert(`Downloading ${title}...`);
+    // For Google Drive links, convert to download format
+    const downloadUrl = slidesUrl + '/export/pptx';
+    window.open(downloadUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -73,13 +77,7 @@ export default function Presentations() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {presentations.map((presentation, index) => (
-              <motion.div
-                key={presentation.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={presentation.id}>
                 <Card
                   title={presentation.title}
                   description={presentation.description}
@@ -118,29 +116,37 @@ export default function Presentations() {
 
                     {/* Action Buttons */}
                     <div className="flex space-x-3">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => handleViewPresentation(presentation.slidesUrl, presentation.title)}
-                        className="flex-1 bg-[#00B8D9] text-white px-4 py-2 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-[#0099CC] transition-all duration-300"
+                      <button
+                        onClick={() => {
+                          console.log('View button clicked!');
+                          alert('View button clicked!');
+                          handleViewPresentation(presentation.slidesUrl, presentation.title);
+                        }}
+                        className="flex-1 bg-[#00B8D9] text-white px-4 py-2 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-[#0099CC] transition-all duration-300 cursor-pointer"
+                        type="button"
+                        style={{ zIndex: 10, position: 'relative' }}
                       >
                         <Play className="w-4 h-4" />
                         <span>View</span>
-                      </motion.button>
+                      </button>
                       
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => handleDownloadSlides(presentation.slidesUrl, presentation.title)}
-                        className="flex-1 border-2 border-[#00B8D9] text-[#00B8D9] px-4 py-2 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-[#00B8D9] hover:text-white transition-all duration-300"
+                      <button
+                        onClick={() => {
+                          console.log('Download button clicked!');
+                          alert('Download button clicked!');
+                          handleDownloadSlides(presentation.slidesUrl, presentation.title);
+                        }}
+                        className="flex-1 border-2 border-[#00B8D9] text-[#00B8D9] px-4 py-2 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-[#00B8D9] hover:text-white transition-all duration-300 cursor-pointer"
+                        type="button"
+                        style={{ zIndex: 10, position: 'relative' }}
                       >
                         <Download className="w-4 h-4" />
                         <span>Download</span>
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

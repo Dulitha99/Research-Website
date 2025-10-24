@@ -2,38 +2,38 @@
   "presentations": [
     {
       "id": 1,
-      "title": "Project Proposal Presentation",
+      "title": "Proposal Presentation",
       "date": "2025-02-12",
-      "type": "PowerPoint",
+      "type": "Google Slides",
       "description": "Initial project proposal presentation outlining research objectives and methodology",
-      "slidesUrl": "/presentations/proposal-slides.pptx",
+      "slidesUrl": "https://docs.google.com/presentation/d/1GnCulb9vzx5QjVjHAeaQZA7pxQDfeHpH",
       "status": "completed"
     },
     {
       "id": 2,
       "title": "Progress Presentation 1",
       "date": "2025-04-10",
-      "type": "PowerPoint",
+      "type": "Google Slides",
       "description": "First progress presentation showcasing initial findings and developments",
-      "slidesUrl": "/presentations/progress-1.pptx",
-      "status": "upcoming"
+      "slidesUrl": "https://docs.google.com/presentation/d/1mWe17c-w9jwSMi0MPDtzHBiu5FZeM8Ws",
+      "status": "completed"
     },
     {
       "id": 3,
       "title": "Progress Presentation 2",
       "date": "2025-07-15",
-      "type": "PowerPoint",
+      "type": "Google Slides",
       "description": "Second progress presentation with advanced research developments",
-      "slidesUrl": "/presentations/progress-2.pptx",
-      "status": "upcoming"
+      "slidesUrl": "https://docs.google.com/presentation/d/1T1n7XaNwwiwJSDYtY-FKtv2Zoep0z47A",
+      "status": "completed"
     },
     {
       "id": 4,
       "title": "Final Presentation",
       "date": "2025-11-15",
-      "type": "PowerPoint",
+      "type": "Google Slides",
       "description": "Final project presentation and defense",
-      "slidesUrl": "/presentations/final.pptx",
+      "slidesUrl": "https://docs.google.com/presentation/d/placeholder/edit?usp=sharing",
       "status": "upcoming"
     }
   ]

@@ -35,11 +35,12 @@ const Card = ({
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay }}
-      whileHover={{ 
-        scale: 1.05, 
-        y: -8,
-        transition: { duration: 0.3 }
-      }}
+      // whileHover disabled to prevent button click interference
+      // whileHover={{ 
+      //   scale: 1.02, 
+      //   y: -4,
+      //   transition: { duration: 0.3 }
+      // }}
       className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group ${className}`}
     >
       {/* Image Section */}
@@ -85,8 +86,8 @@ const Card = ({
         )}
       </div>
 
-      {/* Hover Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00B8D9]/5 to-[#002B5B]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Hover Effect Overlay - Disabled to prevent click interference */}
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-[#00B8D9]/5 to-[#002B5B]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
     </motion.div>
   );
 
