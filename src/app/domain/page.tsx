@@ -2,11 +2,9 @@
 
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
-import Card from '@/components/Card';
 import { 
-  BookOpen, 
+  BookOpen,
   Target, 
-  Lightbulb, 
   Settings, 
   Code, 
   Database, 
@@ -16,9 +14,7 @@ import {
   Zap,
   TrendingUp,
   CheckCircle,
-  AlertTriangle,
-  Users,
-  BarChart3
+  AlertTriangle
 } from 'lucide-react';
 
 export default function Domain() {

@@ -3,13 +3,14 @@
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import Card from '@/components/Card';
-import { Download, FileText, FileCheck, BookOpen, CheckSquare, Calendar, HardDrive } from 'lucide-react';
+import { Download, FileText, FileCheck, BookOpen, CheckSquare, HardDrive } from 'lucide-react';
 import documentsData from '../../../data/documents.json';
 
 export default function Documents() {
   const { documents } = documentsData;
 
   const getIcon = (iconName: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const icons: { [key: string]: any } = {
       FileText,
       FileCheck,
@@ -114,7 +115,7 @@ export default function Documents() {
               Document Categories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our documents are organized into different categories to help you find exactly what you're looking for.
+              Our documents are organized into different categories to help you find exactly what you&apos;re looking for.
             </p>
           </motion.div>
 
@@ -270,7 +271,7 @@ export default function Documents() {
               Need More Information?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Contact our research team for additional documentation or specific information.
+              Can&apos;t find what you&apos;re looking for? Contact our research team for additional documentation or specific information.
             </p>
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}

@@ -16,8 +16,7 @@ const HeroSection = ({
   title, 
   subtitle, 
   description, 
-  showButtons = true,
-  backgroundImage 
+  showButtons = true
 }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#002B5B] via-[#001A3D] to-[#002B5B]">

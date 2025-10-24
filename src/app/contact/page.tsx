@@ -1,68 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import HeroSection from '@/components/HeroSection';
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from 'lucide-react';
+// Removed unused imports
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
-    }, 2000);
-  };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'silentwatch@sliit.lk',
-      description: 'Send us an email for any inquiries',
-      action: () => window.location.href = 'mailto:silentwatch@sliit.lk'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: 'Faculty of Computing, SLIIT',
-      description: 'New Kandy Road, Malabe, Sri Lanka',
-      action: () => window.open('https://maps.google.com/?q=SLIIT+Malabe', '_blank')
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+94 11 754 4801',
-      description: 'Call us during business hours',
-      action: () => window.location.href = 'tel:+94117544801'
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

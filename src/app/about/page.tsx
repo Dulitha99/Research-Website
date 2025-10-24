@@ -8,7 +8,6 @@ import {
   Linkedin, 
   Github, 
   Award, 
-  BookOpen, 
   Users, 
   Shield, 
   Brain, 
@@ -179,7 +178,7 @@ export default function About() {
               Research & Development Team
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Each member of the development team contributed to a core module of the SilentWatch framework, addressing a specific stage in the APT lifecycle — Reconnaissance, Delivery, and Execution. Together, the team's work resulted in a fully integrated, adaptive, and intelligent defense system capable of real-time detection and response.
+              Each member of the development team contributed to a core module of the SilentWatch framework, addressing a specific stage in the APT lifecycle — Reconnaissance, Delivery, and Execution. Together, the team&apos;s work resulted in a fully integrated, adaptive, and intelligent defense system capable of real-time detection and response.
             </p>
           </motion.div>
 

@@ -6,16 +6,8 @@ import Timeline from '@/components/Timeline';
 import { 
   Calendar, 
   Award, 
-  TrendingUp, 
-  BookOpen, 
-  Presentation, 
-  FileText, 
-  Globe, 
   CheckCircle,
-  Clock,
-  Target,
-  Users,
-  BarChart3
+  Clock
 } from 'lucide-react';
 import { useState } from 'react';
 import milestonesData from '../../../data/milestones.json';

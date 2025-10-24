@@ -76,7 +76,7 @@ export default function Presentations() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {presentations.map((presentation, index) => (
+            {presentations.map((presentation) => (
               <div key={presentation.id}>
                 <Card
                   title={presentation.title}
