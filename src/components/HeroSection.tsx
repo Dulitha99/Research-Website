@@ -19,11 +19,11 @@ const HeroSection = ({
   showButtons = true
 }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#002B5B] via-[#001A3D] to-[#002B5B]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-indigo-900">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#002B5B]/90 to-[#001A3D]/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-indigo-900/90" />
         
         {/* Animated Particles */}
         <div className="absolute inset-0">
@@ -57,7 +57,7 @@ const HeroSection = ({
             return (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-[#00B8D9]/30 rounded-full"
+                className="absolute w-2 h-2 bg-indigo-400/30 rounded-full"
                 initial={pos.initial}
                 animate={pos.animate}
                 transition={{
@@ -93,7 +93,7 @@ const HeroSection = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-[#00B8D9] mb-8 font-medium"
+            className="text-xl md:text-2xl text-indigo-400 mb-8 font-medium"
           >
             {subtitle}
           </motion.h2>
@@ -120,7 +120,7 @@ const HeroSection = ({
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#00B8D9] text-white px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl hover:bg-indigo-700 transition-all duration-300"
                 >
                   <span>Explore Research</span>
                   <ArrowRight className="w-5 h-5" />
@@ -131,7 +131,7 @@ const HeroSection = ({
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-[#00B8D9] text-[#00B8D9] px-8 py-4 rounded-lg font-semibold hover:bg-[#00B8D9] hover:text-white transition-all duration-300"
+                  className="border-2 border-indigo-600 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300"
                 >
                   View Milestones
                 </motion.button>
@@ -150,8 +150,8 @@ const HeroSection = ({
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center space-y-3 text-white"
             >
-              <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
-                <Shield className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center">
+                <Shield className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold">APT Detection</h3>
               <p className="text-sm text-gray-300 text-center">
@@ -163,8 +163,8 @@ const HeroSection = ({
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center space-y-3 text-white"
             >
-              <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
-                <Brain className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center">
+                <Brain className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold">Machine Learning</h3>
               <p className="text-sm text-gray-300 text-center">
@@ -176,8 +176,8 @@ const HeroSection = ({
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center space-y-3 text-white"
             >
-              <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center">
-                <Clock className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center">
+                <Clock className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold">Real-Time Response</h3>
               <p className="text-sm text-gray-300 text-center">
@@ -198,12 +198,12 @@ const HeroSection = ({
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-[#00B8D9] rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-indigo-400 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-[#00B8D9] rounded-full mt-2"
+            className="w-1 h-3 bg-indigo-400 rounded-full mt-2"
           />
         </motion.div>
       </motion.div>

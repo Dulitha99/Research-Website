@@ -272,7 +272,7 @@ export default function Domain() {
       />
 
       {/* Research Problem Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -282,12 +282,12 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <researchProblem.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <researchProblem.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{researchProblem.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{researchProblem.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{researchProblem.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{researchProblem.description}</p>
               </div>
             </div>
 
@@ -299,20 +299,20 @@ export default function Domain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-xl p-8"
+                  className="bg-gray-700 rounded-xl p-8 border border-gray-600"
                 >
-                  <h3 className="text-2xl font-bold text-[#002B5B] mb-4">{section.subtitle}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{section.subtitle}</h3>
                   {Array.isArray(section.content) ? (
                     <ul className="space-y-3">
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start space-x-3">
-                          <span className="w-2 h-2 bg-[#00B8D9] rounded-full mt-3 flex-shrink-0" />
-                          <span className="text-gray-700">{item}</span>
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full mt-3 flex-shrink-0" />
+                          <span className="text-gray-300">{item}</span>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-gray-700">{section.content}</p>
+                    <p className="text-gray-300">{section.content}</p>
                   )}
                 </motion.div>
               ))}
@@ -322,7 +322,7 @@ export default function Domain() {
       </section>
 
       {/* Research Gap Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -332,19 +332,19 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <researchGap.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <researchGap.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{researchGap.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{researchGap.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{researchGap.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{researchGap.description}</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#002B5B] text-white">
+                  <thead className="bg-gray-900 text-white">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold">Gap Area</th>
                       <th className="px-6 py-4 text-left font-semibold">Existing Limitation</th>
@@ -359,11 +359,11 @@ export default function Domain() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                        className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-800'}
                       >
-                        <td className="px-6 py-4 font-semibold text-[#002B5B]">{gap.area}</td>
-                        <td className="px-6 py-4 text-gray-700">{gap.limitation}</td>
-                        <td className="px-6 py-4 text-gray-700">{gap.novelty}</td>
+                        <td className="px-6 py-4 font-semibold text-white">{gap.area}</td>
+                        <td className="px-6 py-4 text-gray-300">{gap.limitation}</td>
+                        <td className="px-6 py-4 text-gray-300">{gap.novelty}</td>
                       </motion.tr>
                     ))}
                   </tbody>
@@ -375,7 +375,7 @@ export default function Domain() {
       </section>
 
       {/* Research Objectives Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -385,18 +385,18 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <researchObjectives.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <researchObjectives.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{researchObjectives.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{researchObjectives.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{researchObjectives.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{researchObjectives.description}</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#00B8D9]/10 to-[#002B5B]/10 rounded-xl p-8 mb-8">
-              <h3 className="text-2xl font-bold text-[#002B5B] mb-4">Main Objective</h3>
-              <p className="text-lg text-gray-700">{researchObjectives.mainObjective}</p>
+            <div className="bg-gradient-to-br from-indigo-600/20 to-indigo-800/20 rounded-xl p-8 mb-8 border border-indigo-600/30">
+              <h3 className="text-2xl font-bold text-white mb-4">Main Objective</h3>
+              <p className="text-lg text-gray-300">{researchObjectives.mainObjective}</p>
             </div>
 
             <div className="space-y-8">
@@ -407,14 +407,14 @@ export default function Domain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-xl p-8"
+                  className="bg-gray-700 rounded-xl p-8 border border-gray-600"
                 >
-                  <h3 className="text-2xl font-bold text-[#002B5B] mb-6">{phase.phase}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">{phase.phase}</h3>
                   <ul className="space-y-4">
                     {phase.objectives.map((objective, objIndex) => (
                       <li key={objIndex} className="flex items-start space-x-3">
-                        <CheckCircle className="w-6 h-6 text-[#00B8D9] mt-1 flex-shrink-0" />
-                        <span className="text-gray-700">{objective}</span>
+                        <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                        <span className="text-gray-300">{objective}</span>
                       </li>
                     ))}
                   </ul>
@@ -426,7 +426,7 @@ export default function Domain() {
       </section>
 
       {/* Literature Survey Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -436,12 +436,12 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <literatureSurvey.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <literatureSurvey.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{literatureSurvey.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{literatureSurvey.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{literatureSurvey.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{literatureSurvey.description}</p>
               </div>
             </div>
 
@@ -453,10 +453,10 @@ export default function Domain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl p-8 shadow-lg"
+                  className="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700"
                 >
-                  <h3 className="text-xl font-bold text-[#002B5B] mb-4">{area.area}</h3>
-                  <p className="text-gray-700">{area.content}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{area.area}</h3>
+                  <p className="text-gray-300">{area.content}</p>
                 </motion.div>
               ))}
             </div>
@@ -465,7 +465,7 @@ export default function Domain() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -475,12 +475,12 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <methodology.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <methodology.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{methodology.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{methodology.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{methodology.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{methodology.description}</p>
               </div>
             </div>
 
@@ -490,10 +490,10 @@ export default function Domain() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#00B8D9]/10 to-[#002B5B]/10 rounded-xl p-8"
+                className="bg-gradient-to-br from-indigo-600/20 to-indigo-800/20 rounded-xl p-8 border border-indigo-600/30"
               >
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-4">Development Approach</h3>
-                <p className="text-lg text-gray-700">{methodology.developmentApproach}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Development Approach</h3>
+                <p className="text-lg text-gray-300">{methodology.developmentApproach}</p>
               </motion.div>
 
               <motion.div
@@ -501,20 +501,20 @@ export default function Domain() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-700 rounded-xl p-8 border border-gray-600"
               >
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-6">{methodology.architecture.title}</h3>
-                <p className="text-lg text-gray-700 mb-6">{methodology.architecture.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-6">{methodology.architecture.title}</h3>
+                <p className="text-lg text-gray-300 mb-6">{methodology.architecture.description}</p>
                 
                 <div className="space-y-6">
                   {methodology.architecture.layers.map((layer, index) => (
-                    <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
-                      <h4 className="text-xl font-bold text-[#002B5B] mb-4">{layer.name}</h4>
+                    <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-600">
+                      <h4 className="text-xl font-bold text-white mb-4">{layer.name}</h4>
                       <ul className="space-y-2">
                         {layer.components.map((component, compIndex) => (
                           <li key={compIndex} className="flex items-start space-x-3">
-                            <span className="w-2 h-2 bg-[#00B8D9] rounded-full mt-3 flex-shrink-0" />
-                            <span className="text-gray-700">{component}</span>
+                            <span className="w-2 h-2 bg-indigo-400 rounded-full mt-3 flex-shrink-0" />
+                            <span className="text-gray-300">{component}</span>
                           </li>
                         ))}
                       </ul>
@@ -528,42 +528,42 @@ export default function Domain() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-700 rounded-xl p-8 border border-gray-600"
               >
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-6">Implementation Process</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Implementation Process</h3>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  <div className="bg-white rounded-lg p-6 shadow-sm">
-                    <h4 className="text-lg font-bold text-[#002B5B] mb-4">Preprocessing and Feature Engineering</h4>
+                  <div className="bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-600">
+                    <h4 className="text-lg font-bold text-white mb-4">Preprocessing and Feature Engineering</h4>
                     <ul className="space-y-2">
                       {methodology.implementation.preprocessing.map((item, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <span className="w-2 h-2 bg-[#00B8D9] rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{item}</span>
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="bg-white rounded-lg p-6 shadow-sm">
-                    <h4 className="text-lg font-bold text-[#002B5B] mb-4">Model Training and Evaluation</h4>
+                  <div className="bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-600">
+                    <h4 className="text-lg font-bold text-white mb-4">Model Training and Evaluation</h4>
                     <ul className="space-y-2">
                       {methodology.implementation.training.map((item, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <span className="w-2 h-2 bg-[#00B8D9] rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{item}</span>
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="bg-white rounded-lg p-6 shadow-sm">
-                    <h4 className="text-lg font-bold text-[#002B5B] mb-4">Integration and System Testing</h4>
+                  <div className="bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-600">
+                    <h4 className="text-lg font-bold text-white mb-4">Integration and System Testing</h4>
                     <ul className="space-y-2">
                       {methodology.implementation.integration.map((item, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <span className="w-2 h-2 bg-[#00B8D9] rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{item}</span>
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -576,7 +576,7 @@ export default function Domain() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -586,19 +586,19 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <technologies.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <technologies.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{technologies.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{technologies.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{technologies.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{technologies.description}</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#002B5B] text-white">
+                  <thead className="bg-gray-900 text-white">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold">Category</th>
                       <th className="px-6 py-4 text-left font-semibold">Primary Tools/Libraries</th>
@@ -613,11 +613,11 @@ export default function Domain() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                        className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-800'}
                       >
-                        <td className="px-6 py-4 font-semibold text-[#002B5B]">{tech.category}</td>
-                        <td className="px-6 py-4 text-gray-700">{tech.tools}</td>
-                        <td className="px-6 py-4 text-gray-700">{tech.role}</td>
+                        <td className="px-6 py-4 font-semibold text-white">{tech.category}</td>
+                        <td className="px-6 py-4 text-gray-300">{tech.tools}</td>
+                        <td className="px-6 py-4 text-gray-300">{tech.role}</td>
                       </motion.tr>
                     ))}
                   </tbody>
@@ -629,7 +629,7 @@ export default function Domain() {
       </section>
 
       {/* Expected Outcomes Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -639,12 +639,12 @@ export default function Domain() {
             className="mb-16"
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-6">
-                <expectedOutcomes.icon className="w-8 h-8 text-[#00B8D9]" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mr-6">
+                <expectedOutcomes.icon className="w-8 h-8 text-indigo-400" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-[#002B5B] mb-4">{expectedOutcomes.title}</h2>
-                <p className="text-xl text-gray-600 max-w-4xl">{expectedOutcomes.description}</p>
+                <h2 className="text-4xl font-bold text-white mb-4">{expectedOutcomes.title}</h2>
+                <p className="text-xl text-gray-300 max-w-4xl">{expectedOutcomes.description}</p>
               </div>
             </div>
 
@@ -656,15 +656,15 @@ export default function Domain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0] rounded-xl p-8 shadow-lg"
+                  className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-8 shadow-lg border border-gray-600"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mr-4">
-                      <outcome.icon className="w-6 h-6 text-[#00B8D9]" />
+                    <div className="w-12 h-12 bg-indigo-600/20 rounded-full flex items-center justify-center mr-4">
+                      <outcome.icon className="w-6 h-6 text-indigo-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#002B5B]">{outcome.title}</h3>
+                    <h3 className="text-xl font-bold text-white">{outcome.title}</h3>
                   </div>
-                  <p className="text-gray-700">{outcome.description}</p>
+                  <p className="text-gray-300">{outcome.description}</p>
                 </motion.div>
               ))}
             </div>

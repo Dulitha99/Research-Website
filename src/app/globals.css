@@ -6,10 +6,30 @@
 
 @layer base {
   :root {
-    --primary-blue: #002B5B;
-    --accent-cyan: #00B8D9;
-    --light-gray: #F5F5F5;
-    --white: #FFFFFF;
+    /* Dark Theme Colors */
+    --bg-main: #111827; /* bg-gray-900 */
+    --bg-section: #1f2937; /* bg-gray-800 */
+    --text-primary: #ffffff; /* text-white */
+    --text-secondary: #d1d5db; /* text-gray-300 */
+    --text-muted: #9ca3af; /* text-gray-400 */
+    --text-placeholder: #6b7280; /* text-gray-500 */
+    --accent-primary: #818cf8; /* text-indigo-400 */
+    --accent-indigo: #3b82f6; /* indigo-500 */
+    --accent-indigo-dark: #2563eb; /* indigo-600 */
+    --accent-indigo-darker: #1d4ed8; /* indigo-700 */
+    
+    /* Custom Primary Colors */
+    --primary-50: #eff6ff;
+    --primary-100: #dbeafe;
+    --primary-400: #60a5fa;
+    --primary-500: #3b82f6;
+    --primary-600: #2563eb;
+    --primary-700: #1d4ed8;
+    
+    /* Form Colors */
+    --input-bg: #1f2937; /* bg-gray-800 */
+    --input-border: #4b5563; /* border-gray-600 */
+    --input-focus: #3b82f6; /* focus:ring-indigo-500 */
   }
 
   * {
@@ -24,8 +44,8 @@
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    background-color: #F5F5F5;
-    color: #002B5B;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     line-height: 1.6;
   }
 
@@ -35,27 +55,27 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--bg-section);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #00B8D9;
+    background: var(--accent-indigo);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #002B5B;
+    background: var(--accent-indigo-dark);
   }
 
   /* Text selection */
   ::selection {
-    background-color: #00B8D9;
+    background-color: var(--accent-indigo);
     color: white;
   }
 
   /* Focus styles */
   *:focus {
-    outline: 2px solid #00B8D9;
+    outline: 2px solid var(--accent-indigo);
     outline-offset: 2px;
   }
 }
@@ -63,25 +83,50 @@
 @layer components {
   /* Custom gradient backgrounds */
   .gradient-primary {
-    background: linear-gradient(135deg, #002B5B 0%, #001A3D 100%);
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-section) 100%);
   }
 
   .gradient-accent {
-    background: linear-gradient(135deg, #00B8D9 0%, #0099CC 100%);
+    background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-indigo-dark) 100%);
+  }
+
+  .gradient-dark {
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-section) 50%, #312e81 100%);
   }
 
   /* Custom button styles */
   .btn-primary {
-    @apply bg-[#00B8D9] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0099CC] transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply border-2 border-[#00B8D9] text-[#00B8D9] px-6 py-3 rounded-lg font-semibold hover:bg-[#00B8D9] hover:text-white transition-all duration-300;
+    @apply border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300;
+  }
+
+  .btn-success {
+    @apply bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-warning {
+    @apply bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border-2 border-indigo-600 text-indigo-600 bg-transparent px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300;
   }
 
   /* Card hover effects */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+
+  /* Form elements */
+  .form-input {
+    @apply bg-gray-800 border-gray-600 text-white placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500;
   }
 }
 

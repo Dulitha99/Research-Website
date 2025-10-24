@@ -22,7 +22,7 @@ export default function Milestones() {
       title: 'Total Assessments',
       value: milestones.length,
       icon: Calendar,
-      color: 'text-[#00B8D9]'
+      color: 'text-indigo-400'
     },
     {
       title: 'Total Weightage',
@@ -108,19 +108,19 @@ export default function Milestones() {
       title: 'Phase 1: Initiation and Foundation',
       description: 'Project setup, topic approval, and initial research planning',
       milestones: milestones.filter(m => m.phase === 'Phase 1: Initiation and Foundation'),
-      color: 'bg-blue-50 border-blue-200'
+      color: 'bg-blue-900/50 border-blue-600'
     },
     {
       title: 'Phase 2: Progress and Proof of Concept',
       description: 'Literature review completion, model development, and progress presentations',
       milestones: milestones.filter(m => m.phase === 'Phase 2: Progress and Proof of Concept'),
-      color: 'bg-green-50 border-green-200'
+      color: 'bg-green-900/50 border-green-600'
     },
     {
       title: 'Phase 3: Finalization and Submission',
       description: 'Final documentation, presentations, and project completion',
       milestones: milestones.filter(m => m.phase === 'Phase 3: Finalization and Submission'),
-      color: 'bg-purple-50 border-purple-200'
+      color: 'bg-purple-900/50 border-purple-600'
     }
   ];
 
@@ -135,7 +135,7 @@ export default function Milestones() {
       />
 
       {/* Assessment Breakdown Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -144,18 +144,18 @@ export default function Milestones() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Assessment Breakdown
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Comprehensive overview of all assessment items, due dates, weightage, and learning outcomes for the SilentWatch project.
             </p>
           </motion.div>
 
-          <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+          <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-[#002B5B] text-white">
+                <thead className="bg-gray-900 text-white">
                   <tr>
                     <th className="px-6 py-4 text-left font-semibold">Assessment Item</th>
                     <th className="px-6 py-4 text-left font-semibold">Due Date (Tentative)</th>
@@ -172,13 +172,13 @@ export default function Milestones() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                      className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-800'}
                     >
-                      <td className="px-6 py-4 font-semibold text-[#002B5B]">{item.assessment}</td>
-                      <td className="px-6 py-4 text-gray-700">{item.dueDate}</td>
-                      <td className="px-6 py-4 text-gray-700">{item.weightage}</td>
-                      <td className="px-6 py-4 text-gray-700">{item.learningOutcomes}</td>
-                      <td className="px-6 py-4 text-gray-700">{item.deliverableFocus}</td>
+                      <td className="px-6 py-4 font-semibold text-white">{item.assessment}</td>
+                      <td className="px-6 py-4 text-gray-300">{item.dueDate}</td>
+                      <td className="px-6 py-4 text-gray-300">{item.weightage}</td>
+                      <td className="px-6 py-4 text-gray-300">{item.learningOutcomes}</td>
+                      <td className="px-6 py-4 text-gray-300">{item.deliverableFocus}</td>
                     </motion.tr>
                   ))}
                 </tbody>
@@ -189,7 +189,7 @@ export default function Milestones() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#F5F5F5]">
+      <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -198,10 +198,10 @@ export default function Milestones() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#002B5B] mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Project Statistics
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-300">
               Overview of our research progress and assessment structure
             </p>
           </motion.div>
@@ -214,15 +214,15 @@ export default function Milestones() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300"
+                className="bg-gray-800 rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-700"
               >
                 <div className={`w-16 h-16 ${stat.color} bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 </div>
-                <h3 className="text-3xl font-bold text-[#002B5B] mb-2">
+                <h3 className="text-3xl font-bold text-white mb-2">
                   {stat.value}
                 </h3>
-                <p className="text-gray-600 font-medium">
+                <p className="text-gray-300 font-medium">
                   {stat.title}
                 </p>
               </motion.div>
@@ -232,7 +232,7 @@ export default function Milestones() {
       </section>
 
       {/* Detailed Milestone List Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -241,10 +241,10 @@ export default function Milestones() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Detailed Milestone List
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               This list provides the formal documents and presentations required throughout the project lifecycle. Click on any milestone to view detailed information.
             </p>
           </motion.div>
@@ -259,8 +259,8 @@ export default function Milestones() {
                 viewport={{ once: true }}
                 className={`rounded-xl border-2 ${phase.color} p-8`}
               >
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-4">{phase.title}</h3>
-                <p className="text-gray-600 mb-6">{phase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{phase.title}</h3>
+                <p className="text-gray-300 mb-6">{phase.description}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {phase.milestones.map((milestone, index) => (
@@ -270,14 +270,14 @@ export default function Milestones() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                      className="bg-gray-700 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer border border-gray-600"
                       onClick={() => setSelectedMilestone(milestone)}
                     >
                       <div className="flex justify-between items-start mb-3">
-                        <h4 className="font-semibold text-[#002B5B] text-sm">{milestone.title}</h4>
-                        <span className="text-xs text-[#00B8D9] font-medium">{milestone.weightage}</span>
+                        <h4 className="font-semibold text-white text-sm">{milestone.title}</h4>
+                        <span className="text-xs text-indigo-400 font-medium">{milestone.weightage}</span>
                       </div>
-                      <p className="text-gray-600 text-xs mb-3">{milestone.description}</p>
+                      <p className="text-gray-300 text-xs mb-3">{milestone.description}</p>
                       <div className="flex justify-between items-center">
                         <span className="text-xs text-gray-500">
                           {new Date(milestone.date).toLocaleDateString()}
@@ -300,7 +300,7 @@ export default function Milestones() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -309,10 +309,10 @@ export default function Milestones() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Research Timeline
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Visual timeline of our SilentWatch research journey through key milestones, presentations, and achievements.
             </p>
           </motion.div>
@@ -334,14 +334,14 @@ export default function Milestones() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded-xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            className="bg-gray-800 rounded-xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-start mb-6">
-              <h3 className="text-2xl font-bold text-[#002B5B]">{selectedMilestone.title}</h3>
+              <h3 className="text-2xl font-bold text-white">{selectedMilestone.title}</h3>
               <button
                 onClick={() => setSelectedMilestone(null)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-400 hover:text-white"
               >
                 ✕
               </button>
@@ -349,37 +349,37 @@ export default function Milestones() {
             
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-[#002B5B] mb-2">Description</h4>
-                <p className="text-gray-700">{selectedMilestone.description}</p>
+                <h4 className="font-semibold text-white mb-2">Description</h4>
+                <p className="text-gray-300">{selectedMilestone.description}</p>
               </div>
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold text-[#002B5B] mb-2">Due Date</h4>
-                  <p className="text-gray-700">{new Date(selectedMilestone.date).toLocaleDateString()}</p>
+                  <h4 className="font-semibold text-white mb-2">Due Date</h4>
+                  <p className="text-gray-300">{new Date(selectedMilestone.date).toLocaleDateString()}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#002B5B] mb-2">Weightage</h4>
-                  <p className="text-gray-700">{selectedMilestone.weightage}</p>
+                  <h4 className="font-semibold text-white mb-2">Weightage</h4>
+                  <p className="text-gray-300">{selectedMilestone.weightage}</p>
                 </div>
               </div>
               
               <div>
-                <h4 className="font-semibold text-[#002B5B] mb-2">Learning Outcomes</h4>
-                <p className="text-gray-700">{selectedMilestone.learningOutcomes}</p>
+                <h4 className="font-semibold text-white mb-2">Learning Outcomes</h4>
+                <p className="text-gray-300">{selectedMilestone.learningOutcomes}</p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-[#002B5B] mb-2">Deliverable Focus</h4>
-                <p className="text-gray-700">{selectedMilestone.deliverableFocus}</p>
+                <h4 className="font-semibold text-white mb-2">Deliverable Focus</h4>
+                <p className="text-gray-300">{selectedMilestone.deliverableFocus}</p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-[#002B5B] mb-2">Status</h4>
+                <h4 className="font-semibold text-white mb-2">Status</h4>
                 <span className={`px-3 py-1 rounded-full text-sm ${
-                  selectedMilestone.status === 'completed' ? 'bg-green-100 text-green-800' :
-                  selectedMilestone.status === 'upcoming' ? 'bg-blue-100 text-blue-800' :
-                  'bg-orange-100 text-orange-800'
+                  selectedMilestone.status === 'completed' ? 'bg-green-900/50 text-green-300' :
+                  selectedMilestone.status === 'upcoming' ? 'bg-blue-900/50 text-blue-300' :
+                  'bg-orange-900/50 text-orange-300'
                 }`}>
                   {selectedMilestone.status}
                 </span>
@@ -390,7 +390,7 @@ export default function Milestones() {
       )}
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-[#002B5B] to-[#001A3D] text-white">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -408,7 +408,7 @@ export default function Milestones() {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#00B8D9] text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-indigo-700 transition-all duration-300"
             >
               View Presentations
             </motion.button>

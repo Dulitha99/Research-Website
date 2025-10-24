@@ -67,7 +67,7 @@ export default function About() {
       />
 
       {/* Project Supervisors Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -76,10 +76,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Project Supervisors
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               The SilentWatch project was conducted under the expert guidance of faculty members specializing in cybersecurity, machine learning, and applied artificial intelligence.
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function About() {
                 >
                   <div className="space-y-4">
                     {/* Supervisor Photo */}
-                    <div className="w-24 h-24 rounded-full mx-auto overflow-hidden border-4 border-[#00B8D9]">
+                    <div className="w-24 h-24 rounded-full mx-auto overflow-hidden border-4 border-indigo-400">
                       <img 
                         src={supervisor.photo} 
                         alt={supervisor.name}
@@ -111,7 +111,7 @@ export default function About() {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#00B8D9] to-[#002B5B] rounded-full flex items-center justify-center text-white text-2xl font-bold">${supervisor.name.split(' ').map(n => n[0]).join('')}</div>`;
+                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">${supervisor.name.split(' ').map(n => n[0]).join('')}</div>`;
                           }
                         }}
                       />
@@ -119,13 +119,13 @@ export default function About() {
 
                     {/* Role */}
                     <div className="text-center">
-                      <h4 className="text-lg font-semibold text-[#00B8D9] mb-2">
+                      <h4 className="text-lg font-semibold text-indigo-400 mb-2">
                         {supervisor.role}
                       </h4>
-                      <p className="text-sm text-gray-600 mb-3">
+                      <p className="text-sm text-gray-300 mb-3">
                         {supervisor.specialization}
                       </p>
-                      <p className="text-sm text-[#002B5B] font-medium">
+                      <p className="text-sm text-white font-medium">
                         {supervisor.institution}
                       </p>
                     </div>
@@ -136,7 +136,7 @@ export default function About() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => handleEmailClick(supervisor.email)}
-                        className="w-full flex items-center justify-center space-x-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300"
+                        className="w-full flex items-center justify-center space-x-2 text-indigo-400 hover:text-white transition-colors duration-300"
                       >
                         <Mail className="w-4 h-4" />
                         <span className="text-sm font-medium">Email</span>
@@ -148,7 +148,7 @@ export default function About() {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => handleLinkedInClick(supervisor.linkedin)}
-                            className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300 rounded-lg hover:bg-[#00B8D9]/10"
+                            className="p-2 text-indigo-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-indigo-600/20"
                             title={`Visit ${supervisor.name}'s LinkedIn profile`}
                           >
                             <Linkedin className="w-5 h-5" />
@@ -165,7 +165,7 @@ export default function About() {
       </section>
 
       {/* Research & Development Team Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -174,10 +174,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Research & Development Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Each member of the development team contributed to a core module of the SilentWatch framework, addressing a specific stage in the APT lifecycle — Reconnaissance, Delivery, and Execution. Together, the team&apos;s work resulted in a fully integrated, adaptive, and intelligent defense system capable of real-time detection and response.
             </p>
           </motion.div>
@@ -198,7 +198,7 @@ export default function About() {
                 >
                   <div className="space-y-4">
                     {/* Member Photo */}
-                    <div className="w-24 h-24 rounded-full mx-auto overflow-hidden border-4 border-[#00B8D9]">
+                    <div className="w-24 h-24 rounded-full mx-auto overflow-hidden border-4 border-indigo-400">
                       <img 
                         src={member.photo} 
                         alt={member.name}
@@ -209,7 +209,7 @@ export default function About() {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#00B8D9] to-[#002B5B] rounded-full flex items-center justify-center text-white text-2xl font-bold">${member.name.split(' ').map(n => n[0]).join('')}</div>`;
+                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">${member.name.split(' ').map(n => n[0]).join('')}</div>`;
                           }
                         }}
                       />
@@ -217,15 +217,15 @@ export default function About() {
 
                     {/* Student ID and Role */}
                     <div className="text-center">
-                      <h4 className="text-lg font-semibold text-[#00B8D9] mb-2">
+                      <h4 className="text-lg font-semibold text-indigo-400 mb-2">
                         {member.studentId}
                       </h4>
-                      <p className="text-sm text-gray-600 mb-3">
+                      <p className="text-sm text-gray-300 mb-3">
                         {member.specialization}
                       </p>
                       {member.achievement && (
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-3">
-                          <p className="text-sm text-green-800 font-medium">
+                        <div className="bg-green-900/50 border border-green-600 rounded-lg p-3 mb-3">
+                          <p className="text-sm text-green-300 font-medium">
                             Achievement: {member.achievement}
                           </p>
                         </div>
@@ -238,7 +238,7 @@ export default function About() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => handleEmailClick(member.email)}
-                        className="w-full flex items-center justify-center space-x-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300"
+                        className="w-full flex items-center justify-center space-x-2 text-indigo-400 hover:text-white transition-colors duration-300"
                       >
                         <Mail className="w-4 h-4" />
                         <span className="text-sm font-medium">Email</span>
@@ -250,7 +250,7 @@ export default function About() {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => handleLinkedInClick(member.linkedin)}
-                            className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300 rounded-lg hover:bg-[#00B8D9]/10"
+                            className="p-2 text-indigo-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-indigo-600/20"
                             title={`Visit ${member.name}'s LinkedIn profile`}
                           >
                             <Linkedin className="w-5 h-5" />
@@ -260,7 +260,7 @@ export default function About() {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => handleGithubClick(member.name)}
-                          className="p-2 text-[#00B8D9] hover:text-[#002B5B] transition-colors duration-300"
+                          className="p-2 text-indigo-400 hover:text-white transition-colors duration-300"
                         >
                           <Github className="w-5 h-5" />
                         </motion.button>
@@ -275,7 +275,7 @@ export default function About() {
       </section>
 
       {/* Individual Specializations Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -284,10 +284,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Individual Specializations and Contributions
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Each team member focused on a specific aspect of the SilentWatch framework, contributing their expertise to create a comprehensive APT detection and mitigation system.
             </p>
           </motion.div>
@@ -300,11 +300,11 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0] rounded-xl p-8 shadow-lg"
+                className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl p-8 shadow-lg border border-gray-600"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                   <div className="text-center lg:text-left">
-                    <div className="w-32 h-32 rounded-full mx-auto lg:mx-0 overflow-hidden border-4 border-[#00B8D9] mb-4">
+                    <div className="w-32 h-32 rounded-full mx-auto lg:mx-0 overflow-hidden border-4 border-indigo-400 mb-4">
                       <img 
                         src={member.photo} 
                         alt={member.name}
@@ -315,26 +315,26 @@ export default function About() {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#00B8D9] to-[#002B5B] rounded-full flex items-center justify-center text-white text-3xl font-bold">${member.name.split(' ').map(n => n[0]).join('')}</div>`;
+                            parent.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white text-3xl font-bold">${member.name.split(' ').map(n => n[0]).join('')}</div>`;
                           }
                         }}
                       />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#002B5B] mb-2">{member.name}</h3>
-                    <p className="text-lg text-[#00B8D9] font-semibold mb-2">{member.studentId}</p>
-                    <p className="text-gray-600">{member.specialization}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                    <p className="text-lg text-indigo-400 font-semibold mb-2">{member.studentId}</p>
+                    <p className="text-gray-300">{member.specialization}</p>
                   </div>
 
                   <div className="lg:col-span-2">
-                    <h4 className="text-xl font-bold text-[#002B5B] mb-4">Contribution & Achievement</h4>
-                    <p className="text-gray-700 mb-4">{member.description}</p>
+                    <h4 className="text-xl font-bold text-white mb-4">Contribution & Achievement</h4>
+                    <p className="text-gray-300 mb-4">{member.description}</p>
                     {member.achievement && (
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                      <div className="bg-green-900/50 border border-green-600 rounded-lg p-4">
                         <div className="flex items-center space-x-2 mb-2">
-                          <CheckCircle className="w-5 h-5 text-green-600" />
-                          <span className="font-semibold text-green-800">Key Result:</span>
+                          <CheckCircle className="w-5 h-5 text-green-400" />
+                          <span className="font-semibold text-green-300">Key Result:</span>
                         </div>
-                        <p className="text-green-700 font-medium">{member.achievement}</p>
+                        <p className="text-green-200 font-medium">{member.achievement}</p>
                       </div>
                     )}
                   </div>
@@ -346,7 +346,7 @@ export default function About() {
       </section>
 
       {/* Project Achievements Section */}
-      <section className="py-20 bg-[#F5F5F5]">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,10 +355,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Project Achievements
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               The SilentWatch project has achieved significant milestones in APT detection and mitigation, demonstrating the effectiveness of our integrated approach to cybersecurity defense.
             </p>
           </motion.div>
@@ -369,13 +369,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-gray-800 rounded-xl p-8 shadow-lg text-center border border-gray-700"
             >
-              <div className="w-16 h-16 bg-[#00B8D9] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#002B5B] mb-4">End-to-End APT Defense</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-4">End-to-End APT Defense</h3>
+              <p className="text-gray-300">
                 Designed and implemented a unified, modular defense architecture that effectively covers multiple stages of the APT lifecycle — Reconnaissance, Delivery, and Execution.
               </p>
             </motion.div>
@@ -385,13 +385,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-gray-800 rounded-xl p-8 shadow-lg text-center border border-gray-700"
             >
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#002B5B] mb-4">High-Accuracy ML Models</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-4">High-Accuracy ML Models</h3>
+              <p className="text-gray-300">
                 Each module was independently trained and validated using benchmark datasets such as CIC-MalMem-2022 and NSL-KDD, demonstrating consistently high performance across classification and anomaly detection tasks.
               </p>
             </motion.div>
@@ -401,13 +401,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-gray-800 rounded-xl p-8 shadow-lg text-center border border-gray-700"
             >
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#002B5B] mb-4">Real-Time Detection</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-4">Real-Time Detection</h3>
+              <p className="text-gray-300">
                 The system achieves sub-second latency from detection to alert generation through a Flask-based backend integrated with Firebase Firestore for centralized intelligence management.
               </p>
             </motion.div>
@@ -417,13 +417,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-gray-800 rounded-xl p-8 shadow-lg text-center border border-gray-700"
             >
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Building className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#002B5B] mb-4">Scalable Framework</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-4">Scalable Framework</h3>
+              <p className="text-gray-300">
                 The architecture supports seamless integration of new modules and learning models, ensuring long-term extensibility and adaptability against evolving threat landscapes.
               </p>
             </motion.div>
@@ -432,7 +432,7 @@ export default function About() {
       </section>
 
       {/* Team Statistics */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -441,10 +441,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#002B5B] mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               SilentWatch Team Statistics
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our dedicated team brings together diverse expertise and experience to drive innovation in APT detection and mitigation research.
             </p>
           </motion.div>
@@ -457,11 +457,11 @@ export default function About() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-[#00B8D9] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#002B5B] mb-2">{team.length}</h3>
-              <p className="text-gray-600 font-medium">Team Members</p>
+              <h3 className="text-3xl font-bold text-white mb-2">{team.length}</h3>
+              <p className="text-gray-300 font-medium">Team Members</p>
             </motion.div>
 
             <motion.div
@@ -474,8 +474,8 @@ export default function About() {
               <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#002B5B] mb-2">3</h3>
-              <p className="text-gray-600 font-medium">Undergraduate Researchers</p>
+              <h3 className="text-3xl font-bold text-white mb-2">3</h3>
+              <p className="text-gray-300 font-medium">Undergraduate Researchers</p>
             </motion.div>
 
             <motion.div
@@ -488,8 +488,8 @@ export default function About() {
               <div className="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#002B5B] mb-2">2</h3>
-              <p className="text-gray-600 font-medium">Academic Supervisors</p>
+              <h3 className="text-3xl font-bold text-white mb-2">2</h3>
+              <p className="text-gray-300 font-medium">Academic Supervisors</p>
             </motion.div>
 
             <motion.div
@@ -502,15 +502,15 @@ export default function About() {
               <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[#002B5B] mb-2">R25-037</h3>
-              <p className="text-gray-600 font-medium">Project ID</p>
+              <h3 className="text-3xl font-bold text-white mb-2">R25-037</h3>
+              <p className="text-gray-300 font-medium">Project ID</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Research Philosophy */}
-      <section className="py-20 bg-gradient-to-br from-[#002B5B] to-[#001A3D] text-white">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -527,8 +527,8 @@ export default function About() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-[#00B8D9]" />
+                <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-indigo-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Innovation</h3>
                 <p className="text-gray-300 text-sm">
@@ -536,8 +536,8 @@ export default function About() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-[#00B8D9]" />
+                <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-indigo-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Collaboration</h3>
                 <p className="text-gray-300 text-sm">
@@ -545,8 +545,8 @@ export default function About() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-[#00B8D9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-[#00B8D9]" />
+                <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-indigo-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Excellence</h3>
                 <p className="text-gray-300 text-sm">

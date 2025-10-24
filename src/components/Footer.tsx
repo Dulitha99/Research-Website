@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#002B5B] text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Project Info */}
@@ -18,7 +18,7 @@ const Footer = () => {
             className="lg:col-span-2 space-y-6"
           >
             <div>
-              <h3 className="text-3xl font-bold text-[#00B8D9] mb-2">SilentWatch</h3>
+              <h3 className="text-3xl font-bold text-indigo-400 mb-2">SilentWatch</h3>
               <p className="text-lg text-gray-300 mb-2">
                 Advanced Persistent Threat Detection and Mitigation Framework (R25-037)
               </p>
@@ -32,18 +32,18 @@ const Footer = () => {
 
             {/* Research Phases */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-[#00B8D9]">Research Phases</h4>
+              <h4 className="text-lg font-semibold text-indigo-400">Research Phases</h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-2">
-                  <Shield className="w-4 h-4 text-[#00B8D9]" />
+                  <Shield className="w-4 h-4 text-indigo-400" />
                   <span className="text-sm text-gray-300">Reconnaissance</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Brain className="w-4 h-4 text-[#00B8D9]" />
+                  <Brain className="w-4 h-4 text-indigo-400" />
                   <span className="text-sm text-gray-300">Delivery</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-[#00B8D9]" />
+                  <Clock className="w-4 h-4 text-indigo-400" />
                   <span className="text-sm text-gray-300">Execution</span>
                 </div>
               </div>
@@ -58,29 +58,29 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h4 className="text-lg font-semibold text-[#00B8D9]">Research Navigation</h4>
+            <h4 className="text-lg font-semibold text-indigo-400">Research Navigation</h4>
             <div className="space-y-3">
-              <Link href="/domain" className="flex items-center text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 group">
+              <Link href="/domain" className="flex items-center text-gray-300 hover:text-indigo-400 transition-colors duration-200 group">
                 <FileText className="w-4 h-4 mr-2" />
                 <span>Research Domain</span>
                 <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
-              <Link href="/milestones" className="flex items-center text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 group">
+              <Link href="/milestones" className="flex items-center text-gray-300 hover:text-indigo-400 transition-colors duration-200 group">
                 <Clock className="w-4 h-4 mr-2" />
                 <span>Project Milestones</span>
                 <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
-              <Link href="/presentations" className="flex items-center text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 group">
+              <Link href="/presentations" className="flex items-center text-gray-300 hover:text-indigo-400 transition-colors duration-200 group">
                 <Presentation className="w-4 h-4 mr-2" />
                 <span>Presentations</span>
                 <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
-              <Link href="/documents" className="flex items-center text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 group">
+              <Link href="/documents" className="flex items-center text-gray-300 hover:text-indigo-400 transition-colors duration-200 group">
                 <FileText className="w-4 h-4 mr-2" />
                 <span>Documents</span>
                 <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
-              <Link href="/about" className="flex items-center text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 group">
+              <Link href="/about" className="flex items-center text-gray-300 hover:text-indigo-400 transition-colors duration-200 group">
                 <Users className="w-4 h-4 mr-2" />
                 <span>Research Team</span>
                 <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -96,14 +96,14 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h4 className="text-lg font-semibold text-[#00B8D9]">Contact Information</h4>
+            <h4 className="text-lg font-semibold text-indigo-400">Contact Information</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-[#00B8D9] mt-0.5" />
+                <Mail className="w-5 h-5 text-indigo-400 mt-0.5" />
                 <div>
                   <a 
                     href="mailto:silentwatch@sliit.lk" 
-                    className="text-gray-300 hover:text-[#00B8D9] transition-colors duration-200 block"
+                    className="text-gray-300 hover:text-indigo-400 transition-colors duration-200 block"
                   >
                     silentwatch@sliit.lk
                   </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-[#00B8D9] mt-0.5" />
+                <MapPin className="w-5 h-5 text-indigo-400 mt-0.5" />
                 <div>
                   <span className="text-gray-300 block">Faculty of Computing</span>
                   <span className="text-gray-300 block">Sri Lanka Institute of Information Technology</span>
@@ -119,25 +119,25 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-[#00B8D9]" />
+                <Phone className="w-5 h-5 text-indigo-400" />
                 <span className="text-gray-300">+94 11 754 4801</span>
               </div>
             </div>
 
             {/* Key Achievements */}
             <div className="pt-4 border-t border-gray-700">
-              <h5 className="text-sm font-semibold text-[#00B8D9] mb-3">Key Achievements</h5>
+              <h5 className="text-sm font-semibold text-indigo-400 mb-3">Key Achievements</h5>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Award className="w-3 h-3 text-[#00B8D9]" />
+                  <Award className="w-3 h-3 text-indigo-400" />
                   <span className="text-xs text-gray-300">94.50% Detection Accuracy</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Award className="w-3 h-3 text-[#00B8D9]" />
+                  <Award className="w-3 h-3 text-indigo-400" />
                   <span className="text-xs text-gray-300">98.98% Phishing Detection</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Award className="w-3 h-3 text-[#00B8D9]" />
+                  <Award className="w-3 h-3 text-indigo-400" />
                   <span className="text-xs text-gray-300">Real-time APT Detection</span>
                 </div>
               </div>

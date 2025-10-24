@@ -36,7 +36,7 @@ const Header = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800'
           : 'bg-transparent'
       }`}
     >
@@ -47,7 +47,7 @@ const Header = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               className={`text-2xl font-bold transition-colors duration-200 ${
-                scrolled ? 'text-[#002B5B]' : 'text-white'
+                scrolled ? 'text-white' : 'text-white'
               }`}
             >
               SilentWatch
@@ -65,16 +65,16 @@ const Header = () => {
                 <span
                   className={`text-sm font-medium transition-colors duration-200 ${
                     pathname === item.href
-                      ? 'text-[#00B8D9]'
+                      ? 'text-indigo-400'
                       : scrolled 
-                        ? 'text-[#002B5B] hover:text-[#00B8D9]'
-                        : 'text-white hover:text-[#00B8D9]'
+                        ? 'text-gray-300 hover:text-indigo-400'
+                        : 'text-white hover:text-indigo-400'
                   }`}
                 >
                   {item.name}
                 </span>
                 <motion.div
-                  className="absolute -bottom-1 left-0 h-0.5 bg-[#00B8D9]"
+                  className="absolute -bottom-1 left-0 h-0.5 bg-indigo-400"
                   initial={{ width: 0 }}
                   animate={{
                     width: pathname === item.href ? '100%' : 0,
@@ -90,7 +90,7 @@ const Header = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 transition-colors duration-200 ${
-              scrolled ? 'text-[#002B5B]' : 'text-white'
+              scrolled ? 'text-white' : 'text-white'
             }`}
           >
             <AnimatePresence mode="wait">
@@ -127,7 +127,7 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 bg-white/95 backdrop-blur-md rounded-lg shadow-lg overflow-hidden"
+              className="md:hidden mt-4 bg-gray-800/95 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-gray-700"
             >
               <div className="py-4 space-y-2">
                 {navItems.map((item, index) => (
@@ -142,8 +142,8 @@ const Header = () => {
                       onClick={() => setIsOpen(false)}
                       className={`block px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                         pathname === item.href
-                          ? 'text-[#00B8D9] bg-[#00B8D9]/10'
-                          : 'text-[#002B5B] hover:text-[#00B8D9] hover:bg-[#00B8D9]/10'
+                          ? 'text-indigo-400 bg-indigo-600/20'
+                          : 'text-gray-300 hover:text-indigo-400 hover:bg-indigo-600/20'
                       }`}
                     >
                       {item.name}

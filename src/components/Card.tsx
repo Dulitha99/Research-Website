@@ -41,7 +41,7 @@ const Card = ({
       //   y: -4,
       //   transition: { duration: 0.3 }
       // }}
-      className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group ${className}`}
+      className={`bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-700 ${className}`}
     >
       {/* Image Section */}
       {image && (
@@ -63,19 +63,19 @@ const Card = ({
           <motion.div
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
-            className="w-16 h-16 bg-[#00B8D9]/10 rounded-full flex items-center justify-center mb-4"
+            className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mb-4"
           >
-            <Icon className="w-8 h-8 text-[#00B8D9]" />
+            <Icon className="w-8 h-8 text-indigo-400" />
           </motion.div>
         </div>
       )}
 
       {/* Content Section */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-[#002B5B] mb-3 group-hover:text-[#00B8D9] transition-colors duration-300">
+        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-gray-600 leading-relaxed mb-4">
+        <p className="text-gray-300 leading-relaxed mb-4">
           {description}
         </p>
         

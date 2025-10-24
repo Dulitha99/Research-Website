@@ -19,7 +19,7 @@ const Timeline = ({ milestones }: TimelineProps) => {
       case 'completed':
         return <CheckCircle className="w-6 h-6 text-green-500" />;
       case 'upcoming':
-        return <Clock className="w-6 h-6 text-[#00B8D9]" />;
+        return <Clock className="w-6 h-6 text-indigo-400" />;
       case 'ongoing':
         return <Clock className="w-6 h-6 text-orange-500" />;
       default:
@@ -30,20 +30,20 @@ const Timeline = ({ milestones }: TimelineProps) => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'border-green-500 bg-green-50';
+        return 'border-green-500 bg-green-900/50';
       case 'upcoming':
-        return 'border-[#00B8D9] bg-[#00B8D9]/5';
+        return 'border-indigo-400 bg-indigo-900/50';
       case 'ongoing':
-        return 'border-orange-500 bg-orange-50';
+        return 'border-orange-500 bg-orange-900/50';
       default:
-        return 'border-gray-300 bg-gray-50';
+        return 'border-gray-600 bg-gray-800';
     }
   };
 
   return (
     <div className="relative" ref={ref}>
       {/* Timeline Line */}
-      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#00B8D9] to-[#002B5B]" />
+      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-400 to-indigo-600" />
 
       <div className="space-y-12">
         {milestones.map((milestone, index) => (
@@ -59,7 +59,7 @@ const Timeline = ({ milestones }: TimelineProps) => {
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-              className="relative z-10 flex-shrink-0 w-16 h-16 bg-white rounded-full border-4 border-[#00B8D9] flex items-center justify-center shadow-lg"
+              className="relative z-10 flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full border-4 border-indigo-400 flex items-center justify-center shadow-lg"
             >
               {getStatusIcon(milestone.status)}
             </motion.div>
@@ -72,10 +72,10 @@ const Timeline = ({ milestones }: TimelineProps) => {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-[#002B5B] mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {milestone.title}
                   </h3>
-                  <div className="flex items-center space-x-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-4 text-sm text-gray-300">
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
                       <span>{new Date(milestone.date).toLocaleDateString('en-US', { 
@@ -97,10 +97,10 @@ const Timeline = ({ milestones }: TimelineProps) => {
                   transition={{ duration: 0.4, delay: index * 0.2 + 0.5 }}
                   className={`mt-4 md:mt-0 px-4 py-2 rounded-full text-sm font-semibold ${
                     milestone.status === 'completed'
-                      ? 'bg-green-100 text-green-800'
+                      ? 'bg-green-900/50 text-green-300'
                       : milestone.status === 'ongoing'
-                      ? 'bg-orange-100 text-orange-800'
-                      : 'bg-[#00B8D9]/10 text-[#00B8D9]'
+                      ? 'bg-orange-900/50 text-orange-300'
+                      : 'bg-indigo-900/50 text-indigo-300'
                   }`}
                 >
                   {milestone.status === 'completed' ? 'Completed' : 
@@ -108,7 +108,7 @@ const Timeline = ({ milestones }: TimelineProps) => {
                 </motion.div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 {milestone.description}
               </p>
 
@@ -118,7 +118,7 @@ const Timeline = ({ milestones }: TimelineProps) => {
                   initial={{ width: 0 }}
                   animate={isInView ? { width: '100%' } : { width: 0 }}
                   transition={{ duration: 1, delay: index * 0.2 + 0.8 }}
-                  className="mt-4 h-2 bg-green-200 rounded-full overflow-hidden"
+                  className="mt-4 h-2 bg-green-900/50 rounded-full overflow-hidden"
                 >
                   <div className="h-full bg-green-500 rounded-full" />
                 </motion.div>
