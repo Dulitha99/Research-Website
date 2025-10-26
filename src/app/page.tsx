@@ -186,6 +186,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SilentWatch Demo Video Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              SilentWatch Demo
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Watch our comprehensive demonstration of the SilentWatch framework in action, showcasing real-time APT detection and mitigation capabilities.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl border border-gray-700"
+                src="https://www.youtube.com/embed/sYnGlwbP-dQ"
+                title="Silentwatch Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Quick Links Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
