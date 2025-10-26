@@ -23,10 +23,10 @@ const Footer = () => {
                 Advanced Persistent Threat Detection and Mitigation Framework (R25-037)
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Memory Forensics Based Execution Phase Detection through Temporal Analysis with LSTM
+                Multi-Stage APT Detection and Mitigation through Advanced Machine Learning and Threat Intelligence
               </p>
               <p className="text-sm text-gray-400">
-                A state-of-the-art, modular cybersecurity framework engineered to address Advanced Persistent Threats (APTs) through innovative memory forensics techniques and machine learning.
+                A state-of-the-art, modular cybersecurity framework engineered to address Advanced Persistent Threats (APTs) through innovative detection techniques, real-time analysis, and automated mitigation capabilities.
               </p>
             </div>
 
@@ -102,10 +102,10 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-indigo-400 mt-0.5" />
                 <div>
                   <a 
-                    href="mailto:silentwatch@sliit.lk" 
+                    href="mailto:info@silentwatch.me" 
                     className="text-gray-300 hover:text-indigo-400 transition-colors duration-200 block"
                   >
-                    silentwatch@sliit.lk
+                    info@silentwatch.me
                   </a>
                   <p className="text-xs text-gray-400 mt-1">Project Contact</p>
                 </div>
@@ -163,9 +163,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center space-x-6 text-xs text-gray-400">
-              <span>Memory Forensics</span>
+              <span>APT Detection</span>
               <span>•</span>
-              <span>LSTM Analysis</span>
+              <span>Threat Mitigation</span>
               <span>•</span>
               <span>Cybersecurity Research</span>
             </div>

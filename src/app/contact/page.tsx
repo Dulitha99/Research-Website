@@ -55,10 +55,10 @@ export default function Contact() {
                       <td className="px-6 py-4 font-medium text-white">Project E-mail (General)</td>
                       <td className="px-6 py-4">
                         <a 
-                          href="mailto:silentwatch.apt.r25037@sliit.lk" 
+                          href="mailto:info@silentwatch.me" 
                           className="text-indigo-400 hover:text-white font-medium"
                         >
-                          silentwatch.apt.r25037@sliit.lk
+                          info@silentwatch.me
                         </a>
                       </td>
                       <td className="px-6 py-4 text-gray-300">Please use this address for all formal project inquiries.</td>
@@ -157,19 +157,6 @@ export default function Contact() {
                       </td>
                       <td className="px-6 py-4 text-gray-300">Reconnaissance (Clustering)</td>
                     </tr>
-                    <tr className="hover:bg-gray-700">
-                      <td className="px-6 py-4 font-medium text-white">I.D. Sellahewa</td>
-                      <td className="px-6 py-4 text-gray-300">IT21825996</td>
-                      <td className="px-6 py-4">
-                        <a 
-                          href="mailto:IT21825996@sliit.lk" 
-                          className="text-indigo-400 hover:text-white font-medium"
-                        >
-                          IT21825996@sliit.lk
-                        </a>
-                      </td>
-                      <td className="px-6 py-4 text-gray-300">Exploitation (Reinforcement Learning)</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -249,66 +236,6 @@ Sincerely,
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Common questions about our research project and how to get involved.
-            </p>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              {
-                question: "What is the SilentWatch research project about?",
-                answer: "SilentWatch (R25-037) is an Advanced Persistent Threat Detection and Mitigation Framework that combines memory forensics with LSTM networks to detect execution phases in cybersecurity scenarios. Our goal is to improve the accuracy and automation of memory analysis techniques across multiple attack phases."
-              },
-              {
-                question: "How can I contact the research team?",
-                answer: "You can reach us through our general project email (silentwatch.apt.r25037@sliit.lk) or contact individual team members directly for specific module questions. Use the email template provided above for best results."
-              },
-              {
-                question: "Who should I contact for specific technical questions?",
-                answer: "For module-specific questions, contact the respective team member: H.P.D.D.M. Wickramasinghe (Execution Phase), D.L.K.L. Gangaboda (Delivery Vector), N.H.S. Chandrasekara (Reconnaissance), or I.D. Sellahewa (Exploitation)."
-              },
-              {
-                question: "Are your research findings publicly available?",
-                answer: "Yes, we publish our findings in academic papers and presentations. You can access our documents and presentations through the respective sections of this website."
-              },
-              {
-                question: "Can I collaborate with your research team?",
-                answer: "We welcome collaboration from researchers, students, and professionals in cybersecurity and machine learning. Please use the general project email or contact individual team members based on your area of interest."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700"
-              >
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-300">
-                  {faq.answer}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

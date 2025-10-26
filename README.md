@@ -222,7 +222,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-- **Email**: silentwatch@sliit.lk
+- **Email**: info@silentwatch.me
 - **Institution**: Faculty of Computing, SLIIT
 - **Address**: New Kandy Road, Malabe, Sri Lanka
 
