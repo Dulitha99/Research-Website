@@ -2,39 +2,75 @@
   "documents": [
     {
       "id": 1,
-      "title": "Project Proposal",
+      "title": "Execution Phase Detection Using Memory Forensics Proposal Report",
       "type": "PDF",
-      "size": "2.3 MB",
-      "description": "Initial project proposal document",
-      "downloadUrl": "/documents/proposal.pdf",
+      "size": "3.2 MB",
+      "description": "Proposal report for execution phase detection using memory forensics techniques",
+      "downloadUrl": "https://drive.google.com/file/d/15BeUVfpwEsITyKIP55-5dCtnCg67GyXd/view?usp=sharing",
       "icon": "FileText"
     },
     {
       "id": 2,
-      "title": "Project Charter",
+      "title": "Reconnaissance Detection Using Anomaly-Based Clustering Proposal Report",
       "type": "PDF",
-      "size": "1.8 MB",
-      "description": "Project charter and scope definition",
-      "downloadUrl": "/documents/charter.pdf",
-      "icon": "FileCheck"
+      "size": "2.8 MB",
+      "description": "Proposal report for reconnaissance detection using anomaly-based clustering methods",
+      "downloadUrl": "https://drive.google.com/file/d/14QtMrz_0c5W3gMTMDkYc6r-KHtFkil_U/view?usp=sharing",
+      "icon": "FileText"
     },
     {
       "id": 3,
-      "title": "Final Report",
+      "title": "Delivery Vector Analysis through Phishing Email Detection Proposal Report",
       "type": "PDF",
-      "size": "5.2 MB",
-      "description": "Complete project final report",
-      "downloadUrl": "/documents/final-report.pdf",
-      "icon": "BookOpen"
+      "size": "2.5 MB",
+      "description": "Proposal report for delivery vector analysis through phishing email detection",
+      "downloadUrl": "https://drive.google.com/file/d/1ByeX-xxwUSUmuwgAXG9MmTQjA1xLIflu/view?usp=sharing",
+      "icon": "FileText"
     },
     {
       "id": 4,
-      "title": "Research Checklist",
+      "title": "Research Paper",
       "type": "PDF",
-      "size": "0.8 MB",
-      "description": "Research methodology checklist",
-      "downloadUrl": "/documents/checklist.pdf",
+      "size": "4.1 MB",
+      "description": "Comprehensive research paper on SilentWatch project findings and methodologies",
+      "downloadUrl": "https://drive.google.com/file/d/1lwDwYGTRORd7UrVFIGdrBMYBgeMN7-l7/view?usp=sharing",
+      "icon": "BookOpen"
+    },
+    {
+      "id": 5,
+      "title": "SRS Document - Research Checklist",
+      "type": "PDF",
+      "size": "1.2 MB",
+      "description": "Software Requirements Specification document with research methodology checklist",
+      "downloadUrl": "https://drive.google.com/file/d/14LQ5LqvhQcTRf-KBxwdlAMNob4bSL3sN/view?usp=sharing",
       "icon": "CheckSquare"
+    },
+    {
+      "id": 6,
+      "title": "Final Report - Execution Phase Detection Using Memory Forensics",
+      "type": "PDF",
+      "size": "5.8 MB",
+      "description": "Final comprehensive report on execution phase detection using memory forensics",
+      "downloadUrl": "https://docs.google.com/document/d/18puGHVbUAVvcJbfx9pSgrZv2mUp268zs/edit?usp=sharing&ouid=104756168652460646720&rtpof=true&sd=true",
+      "icon": "FileCheck"
+    },
+    {
+      "id": 7,
+      "title": "Project Charter",
+      "type": "PDF",
+      "size": "1.5 MB",
+      "description": "Project charter defining scope, objectives, and project management framework",
+      "downloadUrl": "https://drive.google.com/file/d/1l9_U3zOOvtiR7jB6tdxbxkihOl7mS4bg/view?usp=drive_link",
+      "icon": "FileCheck"
+    },
+    {
+      "id": 8,
+      "title": "Project Taf",
+      "type": "PDF",
+      "size": "0.9 MB",
+      "description": "Project Taf document outlining project technical specifications and requirements",
+      "downloadUrl": "https://drive.google.com/file/d/1mhkd_KM3vWes-nYXZLag5fKfOTw_vblh/view?usp=sharing",
+      "icon": "FileText"
     }
   ]
 }

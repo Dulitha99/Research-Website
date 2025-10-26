@@ -14,21 +14,15 @@ export default function Presentations() {
       case 'completed':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'upcoming':
-        return <Clock className="w-5 h-5 text-indigo-400" />;
+        return <Clock className="w-5 h-5 text-orange-400" />;
       default:
         return <Calendar className="w-5 h-5 text-gray-400" />;
     }
   };
 
   const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return 'border-green-500 bg-green-50';
-      case 'upcoming':
-        return 'border-indigo-400 bg-indigo-600/20';
-      default:
-        return 'border-gray-300 bg-gray-50';
-    }
+    // Use consistent styling for all cards regardless of status
+    return 'border-gray-700 bg-gray-800';
   };
 
   const handleViewPresentation = (slidesUrl: string, title: string) => {
@@ -100,7 +94,7 @@ export default function Presentations() {
                       <div className="flex items-center space-x-2">
                         {getStatusIcon(presentation.status)}
                         <span className={`font-medium ${
-                          presentation.status === 'completed' ? 'text-green-400' : 'text-indigo-400'
+                          presentation.status === 'completed' ? 'text-green-400' : 'text-orange-400'
                         }`}>
                           {presentation.status === 'completed' ? 'Completed' : 'Upcoming'}
                         </span>
@@ -197,7 +191,7 @@ export default function Presentations() {
                       <div className="flex items-center space-x-2">
                         {getStatusIcon(presentation.status)}
                         <span className={`text-sm font-medium ${
-                          presentation.status === 'completed' ? 'text-green-400' : 'text-indigo-400'
+                          presentation.status === 'completed' ? 'text-green-400' : 'text-orange-400'
                         }`}>
                           {presentation.status === 'completed' ? 'Completed' : 'Upcoming'}
                         </span>

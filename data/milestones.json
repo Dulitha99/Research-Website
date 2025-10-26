@@ -43,19 +43,19 @@
       "marks": 15,
       "weightage": "15%",
       "description": "Presentation covering the completed literature review, selection of core datasets, and detailed planning for the ML model implementations (e.g., Anomaly-Based Clustering and Phishing Detection methodologies).",
-      "status": "upcoming",
+      "status": "completed",
       "phase": "Phase 2: Progress and Proof of Concept",
       "learningOutcomes": "LO1 - LO5",
       "deliverableFocus": "Detailed literature review, finalized datasets, and initial model planning (Module 1/4)"
     },
     {
       "id": 5,
-      "title": "Research Paper (Published)",
+      "title": "Research Paper (Completed)",
       "date": "2025-08-29",
       "marks": 10,
       "weightage": "10%",
-      "description": "A condensed, publication-ready paper focusing on the novel aspects of the framework's methodology and technical contributions.",
-      "status": "upcoming",
+      "description": "A condensed, publication-ready paper focusing on the novel aspects of the framework's methodology and technical contributions. (Completed but not yet published)",
+      "status": "completed",
       "phase": "Phase 3: Finalization and Submission",
       "learningOutcomes": "LO1 - LO4",
       "deliverableFocus": "Concise academic summary of novel methodology and final results"
@@ -67,7 +67,7 @@
       "marks": 18,
       "weightage": "18%",
       "description": "Presentation focusing on model building completion (including achieved accuracy/metrics), backend API integration status, and readiness for final system integration testing.",
-      "status": "upcoming",
+      "status": "completed",
       "phase": "Phase 2: Progress and Proof of Concept",
       "learningOutcomes": "LO1 - LO5",
       "deliverableFocus": "Proof of Concept, model building progress, implementation status, and integration planning"
@@ -79,7 +79,7 @@
       "marks": 19,
       "weightage": "19%",
       "description": "The definitive written document covering all work, from requirements analysis and design to final evaluation, mitigation strategies, and conclusions.",
-      "status": "upcoming",
+      "status": "ongoing",
       "phase": "Phase 3: Finalization and Submission",
       "learningOutcomes": "LO1 - LO5",
       "deliverableFocus": "Comprehensive documentation of design, development, results, analysis, and conclusions"
@@ -103,7 +103,7 @@
       "marks": 2,
       "weightage": "2%",
       "description": "Communication and presentation of the project to a wider audience through a comprehensive project website.",
-      "status": "upcoming",
+      "status": "completed",
       "phase": "Phase 3: Finalization and Submission",
       "learningOutcomes": "LO4",
       "deliverableFocus": "Communication and presentation of the project to a wider audience"

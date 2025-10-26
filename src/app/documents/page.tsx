@@ -21,10 +21,35 @@ export default function Documents() {
   };
 
   const handleDownload = (url: string, title: string) => {
-    // In a real application, this would trigger the actual download
-    console.log(`Downloading ${title} from ${url}`);
-    // For demo purposes, we'll show an alert
-    alert(`Downloading ${title}...`);
+    console.log(`Opening ${title} from ${url}`);
+    
+    // Handle Google Drive links
+    if (url.includes('drive.google.com')) {
+      // Convert Google Drive view links to direct download links
+      let downloadUrl = url;
+      
+      if (url.includes('/file/d/')) {
+        // Extract file ID from Google Drive URL
+        const fileIdMatch = url.match(/\/file\/d\/([a-zA-Z0-9-_]+)/);
+        if (fileIdMatch) {
+          const fileId = fileIdMatch[1];
+          downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+        }
+      } else if (url.includes('/document/d/')) {
+        // Handle Google Docs links - convert to PDF export
+        const docIdMatch = url.match(/\/document\/d\/([a-zA-Z0-9-_]+)/);
+        if (docIdMatch) {
+          const docId = docIdMatch[1];
+          downloadUrl = `https://docs.google.com/document/d/${docId}/export?format=pdf`;
+        }
+      }
+      
+      // Open the download link in a new tab
+      window.open(downloadUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      // For other URLs, open directly
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -91,7 +116,7 @@ export default function Documents() {
                       className="w-full bg-indigo-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-indigo-700 transition-all duration-300"
                     >
                       <Download className="w-5 h-5" />
-                      <span>Download</span>
+                      <span>Open Document</span>
                     </motion.button>
                   </div>
                 </Card>
